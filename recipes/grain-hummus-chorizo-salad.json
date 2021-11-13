@@ -1,0 +1,60 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Hummus and chorizo salad",
+  "image": [""],
+  "author": {
+    "@type": "Person",
+    "name": "Alex Tuppen"
+  },
+  "datePublished": "2021-10-17",
+  "description": "A quick and easy, filling salad.",
+  "prepTime": "PT25M",
+  "cookTime": "PT5M",
+  "totalTime": "PT30M",
+  "keywords": "quick, easy, midweek, weeknight, hummus, chorizo, grains, tomato, cucumber, salad",
+  "recipeYield": "2",
+  "recipeCategory": "Weeknight meal",
+  "recipeIngredient": [
+    "1 chorizo",
+    "400g hummus",
+    "2x 250g pre-cooked grains (I like Merchant Gourmet Persian style grains for this recipe)",
+    "3 medium tomatoes",
+    "half a cucumber",
+    "3 spring onions",
+    "30g fresh flat leaf parsley (coriander works as well)",
+    "freshly ground black pepper",
+    "salt to season"
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Chefs knife"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Chopping board"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Large mixing bowl"
+    }
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Chop",
+      "text": "Chop the chorizo, tomatoes, cucumber into half centimeter cubes, slices the spring onions and parsley, place in a large mixing bowl."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Reheat grains",
+      "text": "Reheat the grains in a microwave according to packet instructions."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Combine and season",
+      "text": "Put the grains in the mixing bowl, top with the hummus and mix, grind in fresh black pepper, season and serve."
+    }
+  ]
+}

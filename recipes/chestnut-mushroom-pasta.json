@@ -1,0 +1,126 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Chestnut and mushroom pasta",
+  "image": [""],
+  "author": {
+    "@type": "Person",
+    "name": "Alex Tuppen"
+  },
+  "datePublished": "2021-02-27",
+  "description": "A quick and creamy mid week pasta meal",
+  "prepTime": "PT5M",
+  "cookTime": "PT25M",
+  "totalTime": "PT30M",
+  "keywords": "quick, easy, healthy, midweek, weeknight, chestnut, mushroom, pasta",
+  "recipeYield": "2",
+  "recipeCategory": "Weeknight meal",
+  "recipeCuisine": "Italian",
+  "recipeIngredient": [
+    "180g cooked chestnuts",
+    "300g mushrooms",
+    "1 medium white onion",
+    "300g whole wheat pasta",
+    "30g fresh flat leaf parsley",
+    "4tbsp vegetable oil",
+    "1 chicken stock pot/cube",
+    "freshly ground black pepper",
+    "salt to season",
+    "parmessan to finish"
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Chefs knife"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Chopping board"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Colander"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Cup"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Frying pan"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Medium saucepan"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Powerful blender"
+    }
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Roughly chop chestnuts, mushrooms and onion",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Roughly chop half the chestnuts, mushrooms and the whole onion."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "The roughly chopped ingredients will be blended until smooth, it is a good idea to remove and roughly chop all of the mushroom stalks as these are tougher than the caps."
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Saute roughly chopped ingredients",
+      "text": "Add 2tbsp vegetable oil to a frying pan and saute the roughly chopped mushrooms and onion, when nearly cooked add the roughly chopped chestnuts to heat through. Once cooked add to a powerful blender."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Begin cooking pasta",
+      "text": "While the chestnuts and mushrooms are sauteing bring a saucepan of salted water to the boil and begin cooking the pasta."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Dice chestnuts and mushrooms",
+      "text": "Evenly dice the remaining chestnuts and mushrooms."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Saute diced ingredients",
+      "text": "Once the roughly chopped ingredients have been added to the blender return the pan to the heat. Add 2tbsp vegetable oil to the pan and saute the diced mushrooms, when nearly cooked through add the diced chestnuts to heat through."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Chop parsley",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Chop the parsley and set aside."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Parsley stalks are tougher than leaves, so chop them off and add them to the blender."
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Blend sauce",
+      "text": "Once the pasta is cooked, reserve a cup of the cooking liquid and drain. Put the chicken stock pot and the reserved pasta cooking liquid in the blender along with a pinch of salt and freshly ground black pepper to taste. Blend until creamy and smooth."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Combine dish",
+      "text": "When the sauteing diced mushrooms and chestnuts are cooked return the pasta to the empty saucepan and combine with the sauce from the blender, the sauted mushrooms and chestnuts and the chopped parsley, stir to combine."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Serve",
+      "text": "Plate and grate parmessan over to taste, serve."
+    }
+  ]
+}

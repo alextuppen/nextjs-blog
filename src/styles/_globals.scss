@@ -1,0 +1,50 @@
+// Breakpoints
+$bp-small: 37.5rem;
+$bp-medium: 56.25rem;
+$bp-large: 75rem;
+$bp-xl: 112.5rem;
+
+@mixin bp-small() {
+  @media only screen and (min-width: $bp-small) {
+    @content;
+  }
+}
+
+@mixin bp-medium() {
+  @media only screen and (min-width: $bp-medium) {
+    @content;
+  }
+}
+
+@mixin bp-large() {
+  @media only screen and (min-width: $bp-large) {
+    @content;
+  }
+}
+
+@mixin bp-xl() {
+  @media only screen and (min-width: $bp-xl) {
+    @content;
+  }
+}
+
+// Colour palette
+$primary-light: #fac44d;
+$primary: #f9ab01;
+$primary-dark: #c78800;
+$secondary-light: #4d83fa;
+$secondary: #014ff9;
+$secondary-dark: #003fc7;
+$text: #ffffff;
+$base-colour: #120f08;
+
+// Elevations
+$elevation-1: #1e1e1e;
+$elevation-2: #232323;
+$elevation-3: #252525;
+$elevation-4: #272727;
+$elevation-5: #2c2c2c;
+$elevation-6: #2f2f2f;
+$elevation-7: #333333;
+$elevation-8: #353535;
+$elevation-9: #383838;

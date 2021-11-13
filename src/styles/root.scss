@@ -1,0 +1,23 @@
+@import "src/styles/globals";
+@import "src/styles/typography";
+
+html {
+  --border-radius: 0.5rem;
+  --padding-half: calc(var(--padding) / 2);
+  --padding: 1rem;
+  --padding-double: calc(var(--padding) * 2);
+}
+
+@include bp-small {
+  html {
+    --border-radius: 0.75rem;
+    --padding: 1.25rem;
+  }
+}
+
+@include bp-medium {
+  html {
+    --border-radius: 1rem;
+    --padding: 1.5rem;
+  }
+}
