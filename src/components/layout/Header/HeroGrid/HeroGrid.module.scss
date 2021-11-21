@@ -7,9 +7,7 @@
 }
 
 .bgWrap {
-  position: fixed;
   height: 100vh;
-  width: 100vw;
   overflow: hidden;
   z-index: -1;
 }
@@ -70,17 +68,14 @@
 }
 
 .buttonWrapper {
-  grid-area: icons;
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  grid-area: icons;
+  gap: var(--padding-double);
+  justify-content: center;
 }
 
 @include bp-small {
-  .buttonWrapper {
-    width: 12rem;
-  }
-
   .grid {
     grid-template-areas:
       "logo title"
@@ -100,10 +95,6 @@
 }
 
 @include bp-medium {
-  .buttonWrapper {
-    width: 13.5rem;
-  }
-
   .logo {
     --logo-width: 12rem;
   }
@@ -119,10 +110,6 @@
 }
 
 @include bp-large {
-  .buttonWrapper {
-    width: 15rem;
-  }
-
   .logo {
     --logo-width: 16rem;
   }
@@ -138,10 +125,6 @@
 }
 
 @include bp-xl {
-  .buttonWrapper {
-    width: 17rem;
-  }
-
   .logo {
     --logo-width: 20rem;
   }

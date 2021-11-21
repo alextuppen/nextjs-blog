@@ -1,6 +1,10 @@
 @import "src/styles/globals";
 @import "src/styles/typography";
 
+body {
+  background-color: $base-colour;
+}
+
 html {
   --border-radius: 0.5rem;
   --padding-half: calc(var(--padding) / 2);

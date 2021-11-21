@@ -1,0 +1,87 @@
+@import "src/styles/globals";
+
+.root {
+  width: 70%;
+  height: 70%;
+  margin: 15%;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.first,
+.middle,
+.hidden,
+.last {
+  position: absolute;
+  height: 15%;
+  width: 100%;
+  border-radius: var(--border-radius);
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.first,
+.last {
+  background: $text;
+}
+
+.middle,
+.hidden {
+  background: $primary;
+}
+
+.first {
+  top: 10%;
+}
+
+.middle,
+.hidden {
+  top: 42.5%;
+}
+
+.last {
+  bottom: 10%;
+}
+
+.open {
+  &.first {
+    top: 42.5%;
+    width: 0%;
+    left: 50%;
+  }
+
+  &.middle {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  &.hidden {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  &.last {
+    top: 42.5%;
+    width: 0%;
+    left: 50%;
+  }
+}

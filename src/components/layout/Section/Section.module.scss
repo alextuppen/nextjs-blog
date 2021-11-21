@@ -1,0 +1,54 @@
+@import "src/styles/globals";
+
+main,
+section,
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--padding-half);
+  width: 100%;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: var(--padding-double) auto;
+}
+
+.footer-logo {
+  width: 25%;
+}
+
+@include bp-small {
+  section,
+  footer {
+    grid-template-columns: minmax(auto, 35rem);
+  }
+
+  .footer-logo {
+    width: 20%;
+  }
+}
+
+@include bp-medium {
+  section,
+  footer {
+    grid-template-columns: minmax(auto, 50rem);
+  }
+}
+
+@include bp-large {
+  section,
+  footer {
+    grid-template-columns: minmax(auto, 70rem);
+  }
+
+  .footer-logo {
+    width: 15%;
+  }
+}
+
+@include bp-xl {
+  section,
+  footer {
+    grid-template-columns: minmax(auto, 80rem);
+  }
+}

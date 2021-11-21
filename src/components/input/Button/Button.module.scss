@@ -1,11 +1,12 @@
 @import "src/styles/globals";
 
-.linkButton {
-  width: 100%;
-  height: 100%;
+.linkButton,
+.button {
   display: block;
   position: relative;
   white-space: nowrap;
+  color: $text;
+  text-decoration: none;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -14,34 +15,72 @@
   user-select: none;
 }
 
-.iconButton {
+.linkButton:hover,
+.button:hover,
+.linkButton:active,
+.button:active {
+  text-decoration: underline;
+  text-decoration-color: $primary;
+  text-decoration-style: double;
+}
+
+.button {
+  background: none;
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.largeIcon {
   width: 3rem;
   height: 3rem;
 }
 
 @include bp-small {
-  .iconButton {
+  .icon {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .largeIcon {
     width: 3.5rem;
     height: 3.5rem;
   }
 }
 
 @include bp-medium {
-  .iconButton {
+  .icon {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .largeIcon {
     width: 4rem;
     height: 4rem;
   }
 }
 
 @include bp-large {
-  .iconButton {
+  .icon {
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+
+  .largeIcon {
     width: 5rem;
     height: 5rem;
   }
 }
 
 @include bp-xl {
-  .iconButton {
+  .icon {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+
+  .largeIcon {
     width: 6rem;
     height: 6rem;
   }

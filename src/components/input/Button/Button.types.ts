@@ -1,8 +1,10 @@
-import { CSSProperties, ReactNode } from "react";
+import { CSSProperties, MouseEventHandler, ReactNode } from "react";
 
 export interface ButtonProps {
+  size?: "default" | "large";
+  onClick?: MouseEventHandler;
   href?: string;
-  icon?: ReactNode;
   external?: boolean;
+  icon?: ReactNode;
   style?: CSSProperties;
 }

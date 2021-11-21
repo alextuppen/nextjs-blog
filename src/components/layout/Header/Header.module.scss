@@ -1,0 +1,93 @@
+@import "src/styles/globals";
+
+.navBar {
+  padding: var(--padding-half);
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  background-color: $elevation-9;
+  border-top-color: $primary;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+  border-bottom-color: $primary;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+}
+
+.homeLink {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.homeLink:hover,
+.homeLink:active {
+  text-decoration: underline;
+  text-decoration-color: $primary;
+  text-decoration-style: double;
+}
+
+.logo {
+  position: relative;
+  --logo-height: 2rem;
+  height: var(--logo-height);
+  width: calc(var(--logo-height) / 1.5);
+}
+
+.homeLinkText {
+  color: $text;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 2rem;
+  margin-left: var(--padding);
+}
+
+.links {
+  display: flex;
+  gap: var(--padding-half);
+}
+
+.internalLinks,
+.externalLinks {
+  display: none;
+  align-items: center;
+  gap: var(--padding-half);
+}
+
+.buttonWrapper {
+  display: block;
+}
+
+.button {
+  border: none;
+  padding: 0;
+  height: 80%;
+  width: 2rem;
+}
+
+@include bp-small {
+  .logo {
+    --logo-height: 2.25rem;
+  }
+
+  .internalLinks {
+    display: flex;
+  }
+}
+
+@include bp-medium {
+  .externalLinks {
+    display: flex;
+  }
+
+  .buttonWrapper {
+    display: none;
+  }
+}
+
+@include bp-large {
+  .logo {
+    --logo-height: 2.5rem;
+  }
+}

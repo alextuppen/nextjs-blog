@@ -15,7 +15,9 @@
     "jsx": "preserve",
     "baseUrl": "src",
     "paths": {
-      "@input": ["./components/input"]
+      "@constants": ["./constants"],
+      "@input": ["./components/input"],
+      "@layout": ["./components/layout"]
     }
   },
   "include": [

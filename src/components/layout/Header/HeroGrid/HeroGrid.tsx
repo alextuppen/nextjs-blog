@@ -1,9 +1,10 @@
 import Image from "next/image";
 import { Button } from "@input";
+import { URL_LINKEDIN, URL_INSTAGRAM, URL_GITHUB } from "@constants";
 import styles from "./HeroGrid.module.scss";
 
 export const HeroGrid = () => (
-  <header className={styles.root}>
+  <div className={styles.root}>
     <div className={styles.bgWrap}>
       <Image
         alt="Flamingos"
@@ -30,7 +31,8 @@ export const HeroGrid = () => (
       <h2 className={styles.text}>Full stack developer</h2>
       <div className={styles.buttonWrapper}>
         <Button
-          href="https://www.linkedin.com/in/alextuppen/"
+          size="large"
+          href={URL_LINKEDIN}
           external
           icon={
             <Image
@@ -41,7 +43,20 @@ export const HeroGrid = () => (
           }
         />
         <Button
-          href="https://github.com/alextuppen/"
+          size="large"
+          href={URL_INSTAGRAM}
+          external
+          icon={
+            <Image
+              src="/icons/websites/instagram.svg"
+              alt="Instagram logo"
+              layout="fill"
+            />
+          }
+        />
+        <Button
+          size="large"
+          href={URL_GITHUB}
           external
           icon={
             <Image
@@ -53,5 +68,5 @@ export const HeroGrid = () => (
         />
       </div>
     </div>
-  </header>
+  </div>
 );

@@ -7,7 +7,9 @@ export default function HomePage() {
       <Head>
         <title>Alex Tuppen</title>
       </Head>
-      <Home />
+      <main>
+        <Home />
+      </main>
     </>
   );
 }
