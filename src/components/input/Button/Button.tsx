@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Button as RButton } from "reakit/Button";
 import { ButtonProps } from "./Button.types";
 import styles from "./Button.module.scss";
 
@@ -43,8 +44,8 @@ export const Button: FC<ButtonProps> = ({
   }
 
   return (
-    <button className={classes} onClick={onClick} style={style}>
+    <RButton className={classes} onClick={onClick} style={style}>
       {icon ? icon : children}
-    </button>
+    </RButton>
   );
 };

@@ -34,6 +34,7 @@ export const HeroGrid = () => (
           size="large"
           href={URL_LINKEDIN}
           external
+          style={{ position: "relative" }}
           icon={
             <Image
               src="/icons/websites/linkedin.svg"
@@ -46,6 +47,7 @@ export const HeroGrid = () => (
           size="large"
           href={URL_INSTAGRAM}
           external
+          style={{ position: "relative" }}
           icon={
             <Image
               src="/icons/websites/instagram.svg"
@@ -58,6 +60,7 @@ export const HeroGrid = () => (
           size="large"
           href={URL_GITHUB}
           external
+          style={{ position: "relative" }}
           icon={
             <Image
               src="/icons/websites/github.svg"

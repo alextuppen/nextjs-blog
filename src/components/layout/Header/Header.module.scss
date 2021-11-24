@@ -60,10 +60,16 @@
 }
 
 .button {
+  width: 2rem;
+  height: 100%;
   border: none;
   padding: 0;
-  height: 80%;
-  width: 2rem;
+  background: none;
+  cursor: pointer;
+}
+
+.menu {
+  background-color: $elevation-8;
 }
 
 @include bp-small {
