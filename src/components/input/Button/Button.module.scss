@@ -5,6 +5,8 @@
   display: block;
   white-space: nowrap;
   color: $text;
+  background: none;
+  border: none;
   text-decoration: none;
   cursor: pointer;
   -webkit-user-select: none;
@@ -21,10 +23,6 @@
   text-decoration: underline;
   text-decoration-color: $primary;
   text-decoration-style: double;
-}
-
-.button {
-  background: none;
 }
 
 .icon {

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -9,6 +8,12 @@ import {
   MenuButton,
   MenuSeparator,
 } from "reakit/Menu";
+import {
+  useToolbarState,
+  Toolbar,
+  ToolbarItem,
+  ToolbarSeparator,
+} from "reakit/Toolbar";
 import { URL_LINKEDIN, URL_INSTAGRAM, URL_GITHUB } from "@constants";
 import { Button } from "@input";
 import { Divider } from "@layout";
@@ -16,77 +21,104 @@ import { HeroGrid } from "./HeroGrid/HeroGrid";
 import { MenuBurger } from "./MenuBurger/MenuBurger";
 import styles from "./Header.module.scss";
 
-export const Header = () => {
-  const router = useRouter();
-  const menu = useMenuState();
-  const [menuOpen, setMenuOpen] = useState(false);
+const internalLinks = [
+  {
+    link: "/recipes",
+    text: "Recipes",
+  },
+];
 
-  console.log(menu);
+const externalLinks = [
+  {
+    link: URL_LINKEDIN,
+    text: "LinkedIn",
+  },
+  {
+    link: URL_INSTAGRAM,
+    text: "Instagram",
+  },
+  {
+    link: URL_GITHUB,
+    text: "Github",
+  },
+];
 
-  const handleMenuToggle = () => setMenuOpen(!menuOpen);
+const DropDown = () => {
+  const menu = useMenuState({ animated: 250 });
 
-  const internalLinks = (
-    <Link href="/recipes">
-      <span>Recipes</span>
-    </Link>
-  );
-
-  const externalLinks = (
+  return (
     <>
-      <Divider orientation="vertical" />
-      <Button href={URL_LINKEDIN} external>
-        <span>LinkedIn</span>
-      </Button>
-      <Button href={URL_INSTAGRAM} external>
-        <span>Instagram</span>
-      </Button>
-      <Button href={URL_GITHUB} external>
-        <span>Github</span>
-      </Button>
+      <MenuButton {...menu} className={styles.button}>
+        <MenuBurger open={menu.visible} />
+      </MenuButton>
+      <Menu {...menu}>
+        <div className={styles.menu}>
+          <div>
+            {internalLinks.map(({ link, text }) => (
+              <MenuItem {...menu} as={Button} href={link}>
+                <span>{text}</span>
+              </MenuItem>
+            ))}
+          </div>
+          <div>
+            <MenuSeparator {...menu} />
+            {externalLinks.map(({ link, text }) => (
+              <MenuItem {...menu} as={Button} href={link} external>
+                <span>{text}</span>
+              </MenuItem>
+            ))}
+          </div>
+        </div>
+      </Menu>
     </>
   );
+};
+
+export const Header = () => {
+  const router = useRouter();
+  const toolbar = useToolbarState();
 
   return (
     <header>
       {router.pathname === "/" && <HeroGrid />}
-      <div className={styles.navBar}>
-        <Link href="/">
-          <div className={styles.homeLink}>
-            <div className={styles.logo}>
-              <Image
-                src="/logo/white.svg"
-                alt="Alex Tuppen logo"
-                layout="fill"
-                objectFit="contain"
-              />
-            </div>
-            <span className={styles.homeLinkText}>Alex Tuppen</span>
+      <Toolbar {...toolbar} className={styles.navBar}>
+        <ToolbarItem
+          {...toolbar}
+          className={styles.homeLink}
+          as={Button}
+          href="/"
+        >
+          <div className={styles.logo}>
+            <Image
+              src="/logo/white.svg"
+              alt="Alex Tuppen logo"
+              layout="fill"
+              objectFit="contain"
+            />
           </div>
-        </Link>
+          <span className={styles.homeLinkText}>Alex Tuppen</span>
+        </ToolbarItem>
         <div className={styles.links}>
-          <div className={styles.internalLinks}>{internalLinks}</div>
-          <div className={styles.externalLinks}>{externalLinks}</div>
+          <div className={styles.internalLinks}>
+            {internalLinks.map(({ link, text }) => (
+              <ToolbarItem {...toolbar} as={Button} href={link}>
+                <span>{text}</span>
+              </ToolbarItem>
+            ))}
+          </div>
+          <div className={styles.externalLinks}>
+            <ToolbarSeparator {...toolbar} />
+            {externalLinks.map(({ link, text }) => (
+              <ToolbarItem {...toolbar} as={Button} href={link} external>
+                <span>{text}</span>
+              </ToolbarItem>
+            ))}
+          </div>
           <div className={styles.buttonWrapper}>
-            <MenuButton {...menu} className={styles.button}>
-              <MenuBurger open={menu.visible} />
-            </MenuButton>
-            <Menu {...menu} className={styles.menu}>
-              <MenuItem
-                {...menu}
-                onClick={() => {
-                  menu.hide();
-                  console.log("clicked on button");
-                }}
-              >
-                Button
-              </MenuItem>
-              <MenuItem {...menu} as="a" href="#" onClick={menu.hide}>
-                Link
-              </MenuItem>
-            </Menu>
+            <ToolbarItem {...toolbar} as={DropDown} />
           </div>
         </div>
-      </div>
+      </Toolbar>
     </header>
   );
 };

@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Link from "next/link";
 import { Button as RButton } from "reakit/Button";
 import { ButtonProps } from "./Button.types";
 import styles from "./Button.module.scss";
@@ -10,9 +11,14 @@ export const Button: FC<ButtonProps> = ({
   icon,
   external,
   style,
+  className,
   children,
 }) => {
   let classes = "";
+
+  if (className) {
+    classes = `${classes} ${className}`;
+  }
 
   if (href) {
     classes = `${classes} ${styles.linkButton}`;
@@ -28,19 +34,22 @@ export const Button: FC<ButtonProps> = ({
     }
   }
 
-  console.log(classes);
-
   if (href) {
-    return (
-      <a
-        className={classes}
-        href={href}
-        target={external ? "_blank" : "_self"}
-        style={style}
-      >
-        {icon ? icon : children}
-      </a>
-    );
+    if (external) {
+      return (
+        <a className={classes} href={href} target="_blank" style={style}>
+          {icon ? icon : children}
+        </a>
+      );
+    } else {
+      return (
+        <Link href={href}>
+          <a className={classes} style={style}>
+            {icon ? icon : children}
+          </a>
+        </Link>
+      );
+    }
   }
 
   return (

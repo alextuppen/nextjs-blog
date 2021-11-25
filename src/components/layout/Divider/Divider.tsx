@@ -1,10 +1,6 @@
-import { DividerProps } from "./Divider.types";
+import { Separator, SeparatorOptions } from "reakit/Separator";
 import styles from "./Divider.module.scss";
 
-export const Divider = ({ orientation = "horizontal" }: DividerProps) => {
-  if (orientation === "horizontal") {
-    return <div className={styles.horizontal}></div>;
-  } else {
-    return <div className={styles.vertical}></div>;
-  }
+export const Divider = (props: SeparatorOptions) => {
+  return <Separator className={styles.divider} {...props} />;
 };

@@ -7,4 +7,5 @@ export interface ButtonProps {
   external?: boolean;
   icon?: ReactNode;
   style?: CSSProperties;
+  className?: string;
 }

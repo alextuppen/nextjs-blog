@@ -1,5 +1,7 @@
 @import "src/styles/globals";
 
+$border-thickness: 0.1rem;
+
 .navBar {
   padding: var(--padding-half);
   position: sticky;
@@ -7,10 +9,10 @@
   justify-content: space-between;
   background-color: $elevation-9;
   border-top-color: $primary;
-  border-top-width: 0.1rem;
+  border-top-width: $border-thickness;
   border-top-style: solid;
   border-bottom-color: $primary;
-  border-bottom-width: 0.1rem;
+  border-bottom-width: $border-thickness;
   border-bottom-style: solid;
 }
 
@@ -69,7 +71,30 @@
 }
 
 .menu {
+  margin-top: calc(var(--padding-half) + $border-thickness);
+  padding: var(--padding-half);
+  display: flex;
+  flex-direction: column;
   background-color: $elevation-8;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  border-left-color: $primary;
+  border-left-width: $border-thickness;
+  border-left-style: solid;
+  border-bottom-color: $primary;
+  border-bottom-width: $border-thickness;
+  border-bottom-style: solid;
+  border-right-color: $primary;
+  border-right-width: $border-thickness;
+  border-right-style: solid;
+  transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
+  opacity: 0;
+  transform-origin: top center;
+  transform: scaleY(0);
+  [data-enter] & {
+    opacity: 1;
+    transform: scaleY(1);
+  }
 }
 
 @include bp-small {
