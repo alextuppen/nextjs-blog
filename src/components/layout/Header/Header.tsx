@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import {
   useMenuState,
   Menu,
@@ -16,7 +15,6 @@ import {
 } from "reakit/Toolbar";
 import { URL_LINKEDIN, URL_INSTAGRAM, URL_GITHUB } from "@constants";
 import { Button } from "@input";
-import { Divider } from "@layout";
 import { HeroGrid } from "./HeroGrid/HeroGrid";
 import { MenuBurger } from "./MenuBurger/MenuBurger";
 import styles from "./Header.module.scss";

@@ -1,0 +1,8 @@
+.card {
+  padding: var(--padding);
+  display: grid;
+  place-items: center center;
+  grid-template-columns: 1fr;
+  gap: var(--padding);
+  border-radius: var(--border-radius);
+}

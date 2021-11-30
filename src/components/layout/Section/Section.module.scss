@@ -1,8 +1,6 @@
 @import "src/styles/globals";
 
-main,
-section,
-footer {
+.section {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--padding-half);
@@ -13,42 +11,26 @@ footer {
   margin: var(--padding-double) auto;
 }
 
-.footer-logo {
-  width: 25%;
-}
-
 @include bp-small {
-  section,
-  footer {
+  .section {
     grid-template-columns: minmax(auto, 35rem);
-  }
-
-  .footer-logo {
-    width: 20%;
   }
 }
 
 @include bp-medium {
-  section,
-  footer {
+  .section {
     grid-template-columns: minmax(auto, 50rem);
   }
 }
 
 @include bp-large {
-  section,
-  footer {
+  .section {
     grid-template-columns: minmax(auto, 70rem);
-  }
-
-  .footer-logo {
-    width: 15%;
   }
 }
 
 @include bp-xl {
-  section,
-  footer {
+  .section {
     grid-template-columns: minmax(auto, 80rem);
   }
 }

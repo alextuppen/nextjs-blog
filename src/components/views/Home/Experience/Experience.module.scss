@@ -1,0 +1,76 @@
+@import "src/styles/globals";
+
+.details {
+  display: grid;
+  grid-template-areas:
+    "organisation"
+    "location"
+    "time"
+    "type";
+  justify-items: center;
+  align-items: center;
+  gap: var(--padding-half);
+}
+
+.organisation {
+  grid-area: organisation;
+}
+
+.location {
+  grid-area: location;
+}
+
+.dateRange {
+  grid-area: time;
+}
+
+.roleType {
+  grid-area: type;
+}
+
+.techWrapper {
+  display: inline-block;
+  max-width: 90%;
+}
+
+.icons {
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.iconWrapper {
+  position: relative;
+  --icon-size: 2rem;
+  width: var(--icon-size);
+  height: var(--icon-size);
+}
+
+.list {
+  margin: unset;
+  padding: var(--padding);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-top: 0.25rem solid var(--text);
+  text-align: left;
+}
+
+.listItem {
+  margin: 0.5rem;
+  display: inline-flex;
+  justify-content: left;
+  align-items: center;
+  list-style-type: none;
+}
+
+@include bp-small {
+  .details {
+    width: 75%;
+    grid-template-areas:
+      "organisation time"
+      "location type";
+    justify-content: space-between;
+  }
+}
