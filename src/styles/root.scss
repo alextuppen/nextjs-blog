@@ -1,27 +1,34 @@
 @import "src/styles/globals";
 @import "src/styles/typography";
 
-body {
-  background-color: $base-colour;
-}
-
 html {
+  --border-width: 0.1rem;
   --border-radius: 0.5rem;
   --padding-half: calc(var(--padding) / 2);
   --padding: 1rem;
   --padding-double: calc(var(--padding) * 2);
 }
 
+body {
+  background-color: $base-colour;
+}
+
+main {
+  gap: var(--padding-double);
+}
+
 @include bp-small {
   html {
+    --border-width: 0.125rem;
     --border-radius: 0.75rem;
-    --padding: 1.25rem;
+    --padding: 1.125rem;
   }
 }
 
 @include bp-medium {
   html {
+    --border-width: 0.15rem;
     --border-radius: 1rem;
-    --padding: 1.5rem;
+    --padding: 1.25rem;
   }
 }

@@ -1,19 +1,13 @@
 @import "src/styles/globals";
 
-$border-thickness: 0.1rem;
-
 .navBar {
+  @include elev-9();
   padding: var(--padding-half);
   position: sticky;
   display: flex;
   justify-content: space-between;
-  background-color: $elevation-9;
-  border-top-color: $primary;
-  border-top-width: $border-thickness;
-  border-top-style: solid;
-  border-bottom-color: $primary;
-  border-bottom-width: $border-thickness;
-  border-bottom-style: solid;
+  border-top: var(--border-width) solid $primary;
+  border-bottom: var(--border-width) solid $primary;
 }
 
 .homeLink {
@@ -50,11 +44,16 @@ $border-thickness: 0.1rem;
   gap: var(--padding-half);
 }
 
-.internalLinks,
-.externalLinks {
+.toolbarInternal,
+.toolbarExternal {
   display: none;
   align-items: center;
   gap: var(--padding-half);
+}
+
+.toolbarSeperator {
+  height: 100%;
+  border-right-color: $text;
 }
 
 .buttonWrapper {
@@ -71,22 +70,18 @@ $border-thickness: 0.1rem;
 }
 
 .menu {
-  margin-top: calc(var(--padding-half) + $border-thickness);
+  @include elev-8();
+  margin-top: calc(var(--padding-half) + var(--border-width));
   padding: var(--padding-half);
   display: flex;
   flex-direction: column;
-  background-color: $elevation-8;
+  align-items: center;
+  gap: var(--padding-half);
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
-  border-left-color: $primary;
-  border-left-width: $border-thickness;
-  border-left-style: solid;
-  border-bottom-color: $primary;
-  border-bottom-width: $border-thickness;
-  border-bottom-style: solid;
-  border-right-color: $primary;
-  border-right-width: $border-thickness;
-  border-right-style: solid;
+  border-left: var(--border-width) solid $primary;
+  border-bottom: var(--border-width) solid $primary;
+  border-right: var(--border-width) solid $primary;
   transition: opacity 250ms ease-in-out, transform 250ms ease-in-out;
   opacity: 0;
   transform-origin: top center;
@@ -97,18 +92,39 @@ $border-thickness: 0.1rem;
   }
 }
 
+.menuInternal,
+.menuExternal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--padding-half);
+}
+
+.menuSeperator {
+  width: 100%;
+  border-bottom-color: $text;
+}
+
 @include bp-small {
   .logo {
     --logo-height: 2.25rem;
   }
 
-  .internalLinks {
+  .menuInternal {
+    display: none;
+  }
+
+  .toolbarInternal {
     display: flex;
   }
 }
 
 @include bp-medium {
-  .externalLinks {
+  .menuExternal {
+    display: none;
+  }
+
+  .toolbarExternal {
     display: flex;
   }
 

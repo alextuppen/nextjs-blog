@@ -54,7 +54,7 @@ export const Button: FC<ButtonProps> = ({
 
   return (
     <RButton className={classes} onClick={onClick} style={style}>
-      {icon ? icon : children}
+      {icon ? icon : <span>{children}</span>}
     </RButton>
   );
 };

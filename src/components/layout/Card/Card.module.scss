@@ -1,8 +1,17 @@
+@import "src/styles/globals";
+
 .card {
+  // width: 100%;
   padding: var(--padding);
   display: grid;
   place-items: center center;
   grid-template-columns: 1fr;
   gap: var(--padding);
-  border-radius: var(--border-radius);
+}
+
+@include bp-small {
+  .card {
+    border: var(--border-width) solid $primary;
+    border-radius: var(--border-radius);
+  }
 }

@@ -1,5 +1,9 @@
 @import "src/styles/globals";
 
+.card {
+  @include elev-1();
+}
+
 .details {
   display: grid;
   grid-template-areas:
@@ -29,7 +33,9 @@
 }
 
 .techWrapper {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 90%;
 }
 
@@ -41,6 +47,7 @@
 }
 
 .iconWrapper {
+  margin: var(--padding-half);
   position: relative;
   --icon-size: 2rem;
   width: var(--icon-size);
@@ -63,6 +70,11 @@
   justify-content: left;
   align-items: center;
   list-style-type: none;
+}
+
+.expandCollapse {
+  display: flex;
+  justify-content: space-between;
 }
 
 @include bp-small {

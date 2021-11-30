@@ -51,21 +51,19 @@ const DropDown = () => {
       </MenuButton>
       <Menu {...menu}>
         <div className={styles.menu}>
-          <div>
+          <div className={styles.menuInternal}>
             {internalLinks.map(({ link, text }) => (
               <MenuItem {...menu} as={Button} href={link}>
                 <span>{text}</span>
               </MenuItem>
             ))}
+            <MenuSeparator {...menu} className={styles.menuSeperator} />
           </div>
-          <div>
-            <MenuSeparator {...menu} />
-            {externalLinks.map(({ link, text }) => (
-              <MenuItem {...menu} as={Button} href={link} external>
-                <span>{text}</span>
-              </MenuItem>
-            ))}
-          </div>
+          {externalLinks.map(({ link, text }) => (
+            <MenuItem {...menu} as={Button} href={link} external>
+              <span>{text}</span>
+            </MenuItem>
+          ))}
         </div>
       </Menu>
     </>
@@ -97,15 +95,18 @@ export const Header = () => {
           <span className={styles.homeLinkText}>Alex Tuppen</span>
         </ToolbarItem>
         <div className={styles.links}>
-          <div className={styles.internalLinks}>
+          <div className={styles.toolbarInternal}>
             {internalLinks.map(({ link, text }) => (
               <ToolbarItem {...toolbar} as={Button} href={link}>
                 <span>{text}</span>
               </ToolbarItem>
             ))}
           </div>
-          <div className={styles.externalLinks}>
-            <ToolbarSeparator {...toolbar} />
+          <div className={styles.toolbarExternal}>
+            <ToolbarSeparator
+              {...toolbar}
+              className={styles.toolbarSeperator}
+            />
             {externalLinks.map(({ link, text }) => (
               <ToolbarItem {...toolbar} as={Button} href={link} external>
                 <span>{text}</span>

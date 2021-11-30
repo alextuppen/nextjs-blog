@@ -3,7 +3,7 @@
 .section {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--padding-half);
+  gap: var(--padding-double);
   width: 100%;
   justify-items: center;
   justify-content: center;

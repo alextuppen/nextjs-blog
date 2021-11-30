@@ -48,3 +48,39 @@ $elevation-6: #2f2f2f;
 $elevation-7: #333333;
 $elevation-8: #353535;
 $elevation-9: #383838;
+
+@mixin elev-1() {
+  background-color: $elevation-1;
+}
+
+@mixin elev-2() {
+  background-color: $elevation-2;
+}
+
+@mixin elev-3() {
+  background-color: $elevation-3;
+}
+
+@mixin elev-4() {
+  background-color: $elevation-4;
+}
+
+@mixin elev-5() {
+  background-color: $elevation-5;
+}
+
+@mixin elev-6() {
+  background-color: $elevation-6;
+}
+
+@mixin elev-7() {
+  background-color: $elevation-7;
+}
+
+@mixin elev-8() {
+  background-color: $elevation-8;
+}
+
+@mixin elev-9() {
+  background-color: $elevation-9;
+}
