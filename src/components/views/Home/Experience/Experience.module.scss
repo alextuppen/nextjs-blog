@@ -33,17 +33,32 @@
 }
 
 .techWrapper {
+  max-width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 90%;
 }
 
 .icons {
+  width: 100%;
+  padding: var(--padding);
   display: inline-flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
+}
+
+.iconsCollapsed {
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid $primary;
+}
+
+.iconsExtended {
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  border-top: var(--border-width) solid $primary;
+  border-left: var(--border-width) solid $primary;
+  border-right: var(--border-width) solid $primary;
 }
 
 .iconWrapper {
@@ -54,9 +69,28 @@
   height: var(--icon-size);
 }
 
+.listWrapper {
+  width: 100%;
+  padding: 0 var(--padding);
+  border-left: var(--border-width) solid $primary;
+  border-right: var(--border-width) solid $primary;
+}
+
+.listWrapperCollapsed {
+  // border: unset;
+}
+
+.listWrapperExtended {
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom: var(--border-width) solid $primary;
+  border-left: var(--border-width) solid $primary;
+  border-right: var(--border-width) solid $primary;
+}
+
 .list {
   margin: unset;
-  padding: var(--padding);
+  padding-bottom: var(--padding);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -64,7 +98,12 @@
   text-align: left;
 }
 
+// https://stackoverflow.com/a/17347691
 .listItem {
+  display: inline-block;
+}
+
+.listItemContent {
   margin: 0.5rem;
   display: inline-flex;
   justify-content: left;
@@ -73,8 +112,15 @@
 }
 
 .expandCollapse {
+  padding: 0 var(--padding) var(--padding) var(--padding);
+  width: 7rem;
   display: flex;
   justify-content: space-between;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  border-bottom: var(--border-width) solid $primary;
+  border-left: var(--border-width) solid $primary;
+  border-right: var(--border-width) solid $primary;
 }
 
 @include bp-small {
@@ -84,5 +130,21 @@
       "organisation time"
       "location type";
     justify-content: space-between;
+  }
+
+  .expandCollapse {
+    width: 7.5rem;
+  }
+}
+
+@include bp-medium {
+  .expandCollapse {
+    width: 8rem;
+  }
+}
+
+@include bp-large {
+  .expandCollapse {
+    width: 8.5rem;
   }
 }

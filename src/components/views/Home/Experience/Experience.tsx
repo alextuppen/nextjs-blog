@@ -3,7 +3,7 @@ import Image from "next/image";
 import AnimateHeight from "react-animate-height";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
 import { Button } from "@input";
-import { Card } from "@layout";
+import { Card, Divider } from "@layout";
 import { ExperienceProps } from "./Experience.types";
 import techLookup from "./techLookup";
 import styles from "./Experience.module.scss";
@@ -20,6 +20,7 @@ export const Experience = ({
   },
 }: ExperienceProps) => {
   const [height, setHeight] = useState<number | string>(0);
+  const [animationFinished, setAnimationFinished] = useState(false);
 
   const handleExpandCollapse = () => {
     if (height === 0) {
@@ -28,6 +29,12 @@ export const Experience = ({
       setHeight(0);
     }
   };
+
+  const handleToggleAnimationFinished = () => {
+    setAnimationFinished(!animationFinished);
+  };
+
+  console.log(animationFinished);
 
   const lookedUpTechs =
     technologies &&
@@ -57,8 +64,12 @@ export const Experience = ({
         <span className={styles.roleType}>{roleType}</span>
       </div>
       {lookedUpTechs && (
-        <div className={styles.techWrapper}>
-          <div className={styles.icons}>
+        <Button className={styles.techWrapper} onClick={handleExpandCollapse}>
+          <div
+            className={`${styles.icons} ${
+              height === 0 ? styles.iconsCollapsed : styles.iconsExtended
+            }`}
+          >
             {lookedUpTechs.map((tech) => (
               <div className={styles.iconWrapper}>
                 <Image
@@ -70,39 +81,50 @@ export const Experience = ({
               </div>
             ))}
           </div>
-          <AnimateHeight height={height} duration={1000}>
+          <AnimateHeight
+            animateOpacity
+            height={height}
+            duration={1000}
+            onAnimationEnd={handleToggleAnimationFinished}
+            className={`${styles.listWrapper} ${
+              height === 0
+                ? styles.listWrapperCollapsed
+                : styles.listWrapperExtended
+            }`}
+          >
+            <Divider />
             <ul className={styles.list}>
               {lookedUpTechs.map((tech) => (
                 <li className={styles.listItem}>
-                  <div className={styles.iconWrapper}>
-                    <Image
-                      src={tech.src}
-                      alt={tech.alt}
-                      layout="fill"
-                      objectFit="contain"
-                    />
+                  <div className={styles.listItemContent}>
+                    <div className={styles.iconWrapper}>
+                      <Image
+                        src={tech.src}
+                        alt={tech.alt}
+                        layout="fill"
+                        objectFit="contain"
+                      />
+                    </div>
+                    <span>{tech.title}</span>
                   </div>
-                  <span>{tech.title}</span>
                 </li>
               ))}
             </ul>
           </AnimateHeight>
-          <Button onClick={handleExpandCollapse}>
-            {height === 0 ? (
-              <span className={styles.expandCollapse}>
-                <BsChevronDoubleDown />
-                <span>Expand</span>
-                <BsChevronDoubleDown />
-              </span>
-            ) : (
-              <span className={styles.expandCollapse}>
-                <BsChevronDoubleUp />
-                <span>Collapse</span>
-                <BsChevronDoubleUp />
-              </span>
-            )}
-          </Button>
-        </div>
+          {height === 0 ? (
+            <span className={styles.expandCollapse}>
+              <BsChevronDoubleDown />
+              <span>Expand</span>
+              <BsChevronDoubleDown />
+            </span>
+          ) : (
+            <span className={styles.expandCollapse}>
+              <BsChevronDoubleUp />
+              <span>Collapse</span>
+              <BsChevronDoubleUp />
+            </span>
+          )}
+        </Button>
       )}
       <p>{description.join()}</p>
     </Card>
