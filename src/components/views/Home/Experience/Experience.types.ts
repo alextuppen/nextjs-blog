@@ -1,8 +1,4 @@
-interface TechLookUp {
-  lookUp: string;
-  title: string;
-  alt: string;
-}
+import { TechnologiesLookUp } from "@layout";
 
 interface Experience {
   title: string;
@@ -10,7 +6,7 @@ interface Experience {
   location: string;
   dateRange: string;
   roleType: string;
-  technologies?: (string | TechLookUp)[];
+  technologies?: (string | TechnologiesLookUp)[];
   description: string[];
 }
 
