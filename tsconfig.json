@@ -16,6 +16,7 @@
     "baseUrl": "src",
     "paths": {
       "@constants": ["./constants"],
+      "@hooks": ["./hooks"],
       "@input": ["./components/input"],
       "@layout": ["./components/layout"],
       "@types": ["./types"]

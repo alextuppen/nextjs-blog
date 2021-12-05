@@ -77,47 +77,49 @@ export const Header = () => {
   return (
     <header>
       {router.pathname === "/" && <HeroGrid />}
-      <Toolbar {...toolbar} className={styles.navBar}>
-        <ToolbarItem
-          {...toolbar}
-          className={styles.homeLink}
-          as={Button}
-          href="/"
-        >
-          <div className={styles.logo}>
-            <Image
-              src="/logo/white.svg"
-              alt="Alex Tuppen logo"
-              layout="fill"
-              objectFit="contain"
-            />
+      <div className={styles.root}>
+        <Toolbar {...toolbar} className={styles.navBar}>
+          <ToolbarItem
+            {...toolbar}
+            className={styles.homeLink}
+            as={Button}
+            href="/"
+          >
+            <div className={styles.logo}>
+              <Image
+                src="/logo/white.svg"
+                alt="Alex Tuppen logo"
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
+            <span className={styles.homeLinkText}>Alex Tuppen</span>
+          </ToolbarItem>
+          <div className={styles.links}>
+            <div className={styles.toolbarInternal}>
+              {internalLinks.map(({ link, text }) => (
+                <ToolbarItem {...toolbar} as={Button} href={link}>
+                  <span>{text}</span>
+                </ToolbarItem>
+              ))}
+            </div>
+            <div className={styles.toolbarExternal}>
+              <ToolbarSeparator
+                {...toolbar}
+                className={styles.toolbarSeperator}
+              />
+              {externalLinks.map(({ link, text }) => (
+                <ToolbarItem {...toolbar} as={Button} href={link} external>
+                  <span>{text}</span>
+                </ToolbarItem>
+              ))}
+            </div>
+            <div className={styles.buttonWrapper}>
+              <ToolbarItem {...toolbar} as={DropDown} />
+            </div>
           </div>
-          <span className={styles.homeLinkText}>Alex Tuppen</span>
-        </ToolbarItem>
-        <div className={styles.links}>
-          <div className={styles.toolbarInternal}>
-            {internalLinks.map(({ link, text }) => (
-              <ToolbarItem {...toolbar} as={Button} href={link}>
-                <span>{text}</span>
-              </ToolbarItem>
-            ))}
-          </div>
-          <div className={styles.toolbarExternal}>
-            <ToolbarSeparator
-              {...toolbar}
-              className={styles.toolbarSeperator}
-            />
-            {externalLinks.map(({ link, text }) => (
-              <ToolbarItem {...toolbar} as={Button} href={link} external>
-                <span>{text}</span>
-              </ToolbarItem>
-            ))}
-          </div>
-          <div className={styles.buttonWrapper}>
-            <ToolbarItem {...toolbar} as={DropDown} />
-          </div>
-        </div>
-      </Toolbar>
+        </Toolbar>
+      </div>
     </header>
   );
 };

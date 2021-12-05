@@ -1,13 +1,20 @@
 @import "src/styles/globals";
 
-.navBar {
+.root {
   @include elev-9();
+  display: flex;
   padding: var(--padding-half);
   position: sticky;
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   border-top: var(--border-width) solid $primary;
   border-bottom: var(--border-width) solid $primary;
+}
+
+.navBar {
+  width: 100%;
+  max-width: var(--content-max-width);
+  display: flex;
+  justify-content: space-between;
 }
 
 .homeLink {

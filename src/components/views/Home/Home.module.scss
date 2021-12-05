@@ -1,0 +1,9 @@
+@import "src/styles/globals";
+
+.card {
+  @include elev-1();
+}
+
+.title {
+  max-width: 50%;
+}

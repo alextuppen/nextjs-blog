@@ -1,36 +1,12 @@
 @import "src/styles/globals";
 
 .section {
-  display: grid;
-  grid-template-columns: 1fr;
+  max-width: var(--content-max-width);
+  display: flex;
+  flex-direction: column;
   gap: var(--padding-double);
-  width: 100%;
-  justify-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
   margin: var(--padding-double) auto;
-}
-
-@include bp-small {
-  .section {
-    grid-template-columns: minmax(auto, 35rem);
-  }
-}
-
-@include bp-medium {
-  .section {
-    grid-template-columns: minmax(auto, 50rem);
-  }
-}
-
-@include bp-large {
-  .section {
-    grid-template-columns: minmax(auto, 70rem);
-  }
-}
-
-@include bp-xl {
-  .section {
-    grid-template-columns: minmax(auto, 80rem);
-  }
 }

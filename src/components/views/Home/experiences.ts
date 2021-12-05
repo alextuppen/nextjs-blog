@@ -1,24 +1,24 @@
 export default [
   {
-    title: "Full stack engineer",
-    organisation: "HeadBox",
-    location: "London",
-    dateRange: "October 2021 - Present",
-    roleType: "Permanent",
+    details: {
+      title: "Full stack engineer",
+      organisation: "HeadBox",
+      location: "London",
+      dateRange: "October 2021 - Present",
+      roleType: "Permanent",
+    },
     technologies: [
       "aws",
       "node",
+      "postgresql",
+      "graphql",
       "git",
       "npm",
       "yarn",
       "eslint",
       "prettier",
+      "apollo",
       "react",
-      {
-        lookUp: "react",
-        title: "React Native",
-        alt: "React Native logo",
-      },
       "javascript",
       "typescript",
       "html",
@@ -27,11 +27,13 @@ export default [
     description: [],
   },
   {
-    title: "Full stack engineer",
-    organisation: "WorldRemit",
-    location: "London",
-    dateRange: "March 2020 - October 2021",
-    roleType: "Permanent",
+    details: {
+      title: "Full stack engineer",
+      organisation: "WorldRemit",
+      location: "London",
+      dateRange: "March 2020 - October 2021",
+      roleType: "Permanent",
+    },
     technologies: [
       "node",
       "git",
@@ -39,7 +41,13 @@ export default [
       "yarn",
       "eslint",
       "prettier",
+      "gatsby",
       "react",
+      {
+        lookUp: "react",
+        title: "React Native",
+        alt: "React Native logo",
+      },
       "javascript",
       "typescript",
       "html",
@@ -58,11 +66,13 @@ export default [
     ],
   },
   {
-    title: "Founder",
-    organisation: "Armicus",
-    location: "London",
-    dateRange: "August 2018 - March 2020",
-    roleType: "Permanent",
+    details: {
+      title: "Founder",
+      organisation: "Armicus",
+      location: "London",
+      dateRange: "August 2018 - March 2020",
+      roleType: "Permanent",
+    },
     technologies: [
       "aws",
       "heroku",
@@ -91,11 +101,13 @@ export default [
     ],
   },
   {
-    title: "Developer",
-    organisation: "PowerON Platforms",
-    location: "London",
-    dateRange: "September 2016 - August 2018",
-    roleType: "Permanent",
+    details: {
+      title: "Developer",
+      organisation: "PowerON Platforms",
+      location: "London",
+      dateRange: "September 2016 - August 2018",
+      roleType: "Permanent",
+    },
     technologies: [
       "azure",
       "sccm",
@@ -120,11 +132,13 @@ export default [
     ],
   },
   {
-    title: "Support Engineer",
-    organisation: "Cireson",
-    location: "London",
-    dateRange: "August 2015 - September 2016",
-    roleType: "Permanent",
+    details: {
+      title: "Support Engineer",
+      organisation: "Cireson",
+      location: "London",
+      dateRange: "August 2015 - September 2016",
+      roleType: "Permanent",
+    },
     description: [
       "Providing highly technical support to a large customer base, each with unique and complex environments. ",
       "Technologies most frequently utilised include Active Directory, IIS, PowerShell, SQL, SCSM and SCCM. ",
@@ -135,11 +149,13 @@ export default [
     ],
   },
   {
-    title: "Senior Technical analyst",
-    organisation: "Rocksteady Studios Ltd",
-    location: "London",
-    dateRange: "May 2013 - August 2015",
-    roleType: "Permanent",
+    details: {
+      title: "Senior Technical analyst",
+      organisation: "Rocksteady Studios Ltd",
+      location: "London",
+      dateRange: "May 2013 - August 2015",
+      roleType: "Permanent",
+    },
     description: [
       "Responsible for managing and providing all first line and second line activities in a highly technically ",
       "complex environment for a user base of between 130 and 170 (headcount increased as the project progressed). ",

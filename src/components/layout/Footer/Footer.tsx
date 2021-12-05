@@ -11,7 +11,9 @@ export const Footer = () => (
         objectFit="contain"
       />
     </div>
-    <p>Copyright © 2020 Alex Tuppen</p>
-    <p>Published under the GNU GPL v3 license</p>
+    <div className={styles.text}>
+      <p>Copyright © 2020 Alex Tuppen</p>
+      <p>Published under the GNU GPL v3 license</p>
+    </div>
   </footer>
 );

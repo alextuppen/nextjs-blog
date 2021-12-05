@@ -1,10 +1,20 @@
 @import "src/styles/globals";
 
-.card {
-  @include elev-1();
+.root {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--padding);
+}
+
+.title {
+  max-width: 50%;
 }
 
 .details {
+  width: 100%;
   display: grid;
   grid-template-areas:
     "organisation"
@@ -34,10 +44,27 @@
 
 @include bp-small {
   .details {
-    width: 75%;
     grid-template-areas:
       "organisation time"
       "location type";
     justify-content: space-between;
+  }
+}
+
+@include bp-medium {
+  .details {
+    width: 75%;
+  }
+}
+
+@include bp-large {
+  .details {
+    width: 60%;
+  }
+}
+
+@include bp-xl {
+  .details {
+    width: 50%;
   }
 }

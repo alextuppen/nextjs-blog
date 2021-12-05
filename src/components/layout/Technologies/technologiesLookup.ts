@@ -1,13 +1,23 @@
 export default {
   apollo: {
     src: "/icons/frameworks/apollo.svg",
-    title: "Apollo",
+    title: "Apollo GraphQL",
     alt: "Apollo GraphQL logo",
   },
   dotNet: {
     src: "/icons/frameworks/dot-net.svg",
     title: ".Net",
     alt: ".Net logo",
+  },
+  gatsby: {
+    src: "/icons/frameworks/gatsby.svg",
+    title: "Gatsby",
+    alt: "Gatsby logo",
+  },
+  nextjs: {
+    src: "/icons/frameworks/nextjs.svg",
+    title: "NextJS",
+    alt: "NextJS logo",
   },
   react: {
     src: "/icons/frameworks/react.svg",

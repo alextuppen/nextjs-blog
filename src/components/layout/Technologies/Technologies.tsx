@@ -2,6 +2,8 @@ import { useState } from "react";
 import Image from "next/image";
 import AnimateHeight from "react-animate-height";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
+import { useMediaQuery } from "hooks";
+import { BP_QUERY_SMALL } from "@constants";
 import { Button } from "@input";
 import { Divider } from "@layout";
 import { TechnologiesProps } from "./Technologies.types";
@@ -10,6 +12,7 @@ import styles from "./Technologies.module.scss";
 
 export const Technologies = ({ technologies }: TechnologiesProps) => {
   const [height, setHeight] = useState<number | string>(0);
+  const isSmallBP = useMediaQuery(BP_QUERY_SMALL);
 
   const count = technologies.length;
 
@@ -61,7 +64,9 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
           <Divider className={styles.divider} />
           <ul
             className={styles.list}
-            style={{ gridTemplateColumns: count < 8 ? "1fr" : "1fr 1fr" }}
+            style={{
+              gridTemplateColumns: count > 8 && isSmallBP ? "1fr 1fr" : "1fr",
+            }}
           >
             {lookedUpTechs.map((tech) => (
               <li className={styles.listItem}>

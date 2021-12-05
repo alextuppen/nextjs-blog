@@ -1,9 +1,14 @@
 @import "src/styles/globals";
 @import "src/styles/typography";
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   --border-width: 0.1rem;
   --border-radius: 0.5rem;
+  --content-max-width: 100%;
   --padding-half: calc(var(--padding) / 2);
   --padding: 1rem;
   --padding-double: calc(var(--padding) * 2);
@@ -21,6 +26,7 @@ main {
   html {
     --border-width: 0.125rem;
     --border-radius: 0.75rem;
+    --content-max-width: 95%;
     --padding: 1.125rem;
   }
 }
@@ -30,5 +36,17 @@ main {
     --border-width: 0.15rem;
     --border-radius: 1rem;
     --padding: 1.25rem;
+  }
+}
+
+@include bp-large {
+  html {
+    --content-max-width: 70rem;
+  }
+}
+
+@include bp-xl {
+  html {
+    --content-max-width: 90rem;
   }
 }

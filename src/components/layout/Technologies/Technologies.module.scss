@@ -68,7 +68,7 @@
   position: relative;
   top: calc(var(--border-width) * -1);
   padding: 0 var(--padding) var(--padding) var(--padding);
-  width: 7rem;
+  width: 9rem;
   @include elev-6();
   display: flex;
   justify-content: space-between;
@@ -86,7 +86,7 @@
   }
 
   .expandCollapse {
-    width: 7.5rem;
+    width: 9.75rem;
   }
 }
 
@@ -96,12 +96,12 @@
   }
 
   .expandCollapse {
-    width: 8rem;
+    width: 10.5rem;
   }
 }
 
 @include bp-large {
   .expandCollapse {
-    width: 8.5rem;
+    width: 11rem;
   }
 }

@@ -4,12 +4,10 @@
   width: 100%;
   bottom: 0;
   margin: var(--padding-double) auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--padding-half);
-  justify-items: center;
-  justify-content: center;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--padding-double);
 }
 
 .logo {
@@ -19,34 +17,21 @@
   height: calc(var(--logo-width) * 1.5);
 }
 
-@include bp-small {
-  .root {
-    grid-template-columns: minmax(auto, 35rem);
-  }
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-half);
+  text-align: center;
+}
 
+@include bp-small {
   .logo {
     --logo-width: 6.5rem;
   }
 }
 
-@include bp-medium {
-  .root {
-    grid-template-columns: minmax(auto, 50rem);
-  }
-}
-
 @include bp-large {
-  .root {
-    grid-template-columns: minmax(auto, 70rem);
-  }
-
   .logo {
     --logo-width: 9rem;
-  }
-}
-
-@include bp-xl {
-  .root {
-    grid-template-columns: minmax(auto, 80rem);
   }
 }
