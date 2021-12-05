@@ -26,8 +26,8 @@ export default {
   },
   postgresql: {
     src: "/icons/infrastructure/postgresql.svg",
-    title: "PostGreSQL",
-    alt: "PostGreSQL logo",
+    title: "PostgreSQL",
+    alt: "PostgreSQL logo",
   },
   sccm: {
     src: "/icons/infrastructure/sccm.svg",
@@ -41,12 +41,12 @@ export default {
   },
   css: {
     src: "/icons/languages/css.svg",
-    title: "Cascading Style Sheets",
+    title: "Cascading Style Sheets (CSS)",
     alt: "Cascading Style Sheets logo",
   },
   html: {
     src: "/icons/languages/html.svg",
-    title: "Hyper Text Markup Language",
+    title: "Hyper Text Markup Language (HTML)",
     alt: "Hyper Text Markup Language logo",
   },
   javascript: {
@@ -66,7 +66,7 @@ export default {
   },
   aws: {
     src: "/icons/platforms/aws.svg",
-    title: "Amazon Web Services",
+    title: "Amazon Web Services (AWS)",
     alt: "Amazon Web Services logo",
   },
   azure: {
@@ -91,7 +91,7 @@ export default {
   },
   npm: {
     src: "/icons/tools/npm.svg",
-    title: "Node Package Manager",
+    title: "Node Package Manager (NPM)",
     alt: "Node Package Manager logo",
   },
   prettier: {

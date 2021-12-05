@@ -45,7 +45,17 @@ export default [
       "html",
       "css",
     ],
-    description: [],
+    description: [
+      "Member of a number of teams working on a variety of different projects covering the last 3 years of ",
+      "JavaScript technologies including a legacy in house developed SSR and BFF platform, a Next.JS, Gastby.JS,  ",
+      "and Material UI monorepo, a React Native Android app and a new REST API built using clean architecture. ",
+      "Being a much larger company than any of my previous employers WorldRemit has presented a number of new ",
+      "opportunities for me; assisting designers make their designs technically possible, interviewing for ",
+      "engineering managers to offer a potential employee perspective, pairing with Android developers to ",
+      "overcome problems caused by the interface between React Native and the underlying native Java, and ",
+      "working with the security team to manage a last minute upgrade of the bot protection SDK to the new ",
+      "partner without affecting the end user experience or Product’s timeline are just a selection.",
+    ],
   },
   {
     title: "Founder",
@@ -81,7 +91,7 @@ export default [
     ],
   },
   {
-    title: "Develper",
+    title: "Developer",
     organisation: "PowerON Platforms",
     location: "London",
     dateRange: "September 2016 - August 2018",

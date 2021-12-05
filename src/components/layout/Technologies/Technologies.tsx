@@ -11,6 +11,8 @@ import styles from "./Technologies.module.scss";
 export const Technologies = ({ technologies }: TechnologiesProps) => {
   const [height, setHeight] = useState<number | string>(0);
 
+  const count = technologies.length;
+
   const handleExpandCollapse = () => {
     if (height === 0) {
       setHeight("auto");
@@ -38,7 +40,7 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
   return (
     <Button
       // @ts-ignore - --count is a CSS variable and so not part of CSSProperties type
-      style={{ "--count": technologies.length }}
+      style={{ "--count": count }}
       className={styles.root}
       onClick={handleExpandCollapse}
     >
@@ -57,7 +59,10 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
         </div>
         <AnimateHeight animateOpacity height={height} duration={1000}>
           <Divider className={styles.divider} />
-          <ul className={styles.list}>
+          <ul
+            className={styles.list}
+            style={{ gridTemplateColumns: count < 8 ? "1fr" : "1fr 1fr" }}
+          >
             {lookedUpTechs.map((tech) => (
               <li className={styles.listItem}>
                 <div className={styles.listItemContent}>

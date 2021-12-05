@@ -35,13 +35,12 @@
 }
 
 .list {
+  // Calculated width of .icons
   // (icon width + 2 * half padding of margin either side) * number of icons
   max-width: calc((var(--icon-size) + var(--padding)) * var(--count));
   margin: unset;
   padding: var(--padding);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
   gap: var(--padding-half);
   border-top: 0.25rem solid var(--text);
   text-align: left;
