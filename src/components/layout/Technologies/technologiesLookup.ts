@@ -31,7 +31,7 @@ export default {
   },
   sccm: {
     src: "/icons/infrastructure/sccm.svg",
-    title: "System Center Configuration Manager",
+    title: "System Center Configuration Manager (SCCM)",
     alt: "System Center Configuration Manager logo",
   },
   cSharp: {

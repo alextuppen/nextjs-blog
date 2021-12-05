@@ -1,6 +1,7 @@
-import { Separator, SeparatorOptions } from "reakit/Separator";
+import { Separator } from "reakit/Separator";
 import styles from "./Divider.module.scss";
+import { DividerProps } from "./Divider.types";
 
-export const Divider = (props: SeparatorOptions) => {
-  return <Separator className={styles.divider} {...props} />;
+export const Divider = ({ className, ...rest }: DividerProps) => {
+  return <Separator className={`${styles.divider} ${className}`} {...rest} />;
 };

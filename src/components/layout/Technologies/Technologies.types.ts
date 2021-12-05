@@ -5,5 +5,5 @@ export interface TechnologiesLookUp {
 }
 
 export interface TechnologiesProps {
-  technologies?: (string | TechnologiesLookUp)[];
+  technologies: (string | TechnologiesLookUp)[];
 }

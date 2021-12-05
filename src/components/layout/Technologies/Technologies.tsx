@@ -36,45 +36,46 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
   });
 
   return (
-    <Button className={styles.techWrapper} onClick={handleExpandCollapse}>
-      <div className={styles.icons}>
-        {lookedUpTechs.map((tech) => (
-          <div className={styles.iconWrapper}>
-            <Image
-              src={tech.src}
-              alt={tech.alt}
-              layout="fill"
-              objectFit="contain"
-            />
-          </div>
-        ))}
-      </div>
-      <AnimateHeight
-        animateOpacity
-        height={height}
-        duration={1000}
-        className={styles.listWrapper}
-      >
-        <Divider />
-        <ul className={styles.list}>
+    <Button
+      // @ts-ignore - --count is a CSS variable and so not part of CSSProperties type
+      style={{ "--count": technologies.length }}
+      className={styles.root}
+      onClick={handleExpandCollapse}
+    >
+      <div className={styles.wrapper}>
+        <div className={styles.icons}>
           {lookedUpTechs.map((tech) => (
-            <li className={styles.listItem}>
-              <div className={styles.listItemContent}>
-                <div className={styles.iconWrapper}>
-                  <Image
-                    src={tech.src}
-                    alt={tech.alt}
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                </div>
-                <span>{tech.title}</span>
-              </div>
-            </li>
+            <div className={styles.iconWrapper}>
+              <Image
+                src={tech.src}
+                alt={tech.alt}
+                layout="fill"
+                objectFit="contain"
+              />
+            </div>
           ))}
-        </ul>
-      </AnimateHeight>
-      <div className={styles.bottomBorder} />
+        </div>
+        <AnimateHeight animateOpacity height={height} duration={1000}>
+          <Divider className={styles.divider} />
+          <ul className={styles.list}>
+            {lookedUpTechs.map((tech) => (
+              <li className={styles.listItem}>
+                <div className={styles.listItemContent}>
+                  <div className={styles.iconWrapper}>
+                    <Image
+                      src={tech.src}
+                      alt={tech.alt}
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  </div>
+                  <span>{tech.title}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </AnimateHeight>
+      </div>
       {height === 0 ? (
         <span className={styles.expandCollapse}>
           <BsChevronDoubleDown />

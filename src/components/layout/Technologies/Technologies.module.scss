@@ -1,51 +1,48 @@
 @import "src/styles/globals";
 
-.techWrapper {
+.root {
   max-width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  --icon-size: 1.5rem;
+}
+
+.wrapper {
+  @include elev-6();
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid $primary;
 }
 
 .icons {
-  width: 100%;
-  padding: var(--padding) var(--padding) 0 var(--padding);
-  @include elev-6();
+  padding: var(--padding);
   display: inline-flex;
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
-  border-top: var(--border-width) solid $primary;
-  border-left: var(--border-width) solid $primary;
-  border-right: var(--border-width) solid $primary;
 }
 
 .iconWrapper {
   margin: var(--padding-half);
   position: relative;
-  --icon-size: 2rem;
   width: var(--icon-size);
   height: var(--icon-size);
+  flex-shrink: 0;
 }
 
-.listWrapper {
-  width: 100%;
-  @include elev-6();
-  padding: 0 var(--padding);
-  border-left: var(--border-width) solid $primary;
-  border-right: var(--border-width) solid $primary;
-  border-left: var(--border-width) solid $primary;
-  border-right: var(--border-width) solid $primary;
+.divider {
+  margin: unset;
 }
 
 .list {
+  // (icon width + 2 * half padding of margin either side) * number of icons
+  max-width: calc((var(--icon-size) + var(--padding)) * var(--count));
   margin: unset;
-  padding: unset;
+  padding: var(--padding);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  gap: var(--padding-half);
   border-top: 0.25rem solid var(--text);
   text-align: left;
 }
@@ -53,26 +50,19 @@
 // https://stackoverflow.com/a/17347691
 .listItem {
   display: inline-block;
+  width: 100%;
 }
 
 .listItemContent {
-  margin: 0.5rem;
   display: inline-flex;
   justify-content: left;
   align-items: center;
   list-style-type: none;
 }
 
-.bottomBorder {
-  height: var(--padding);
-  width: 100%;
-  @include elev-6();
-  padding: 0 var(--padding);
-  border-bottom-left-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
-  border-bottom: var(--border-width) solid $primary;
-  border-left: var(--border-width) solid $primary;
-  border-right: var(--border-width) solid $primary;
+.listItemContent > span {
+  margin-left: var(--padding);
+  white-space: initial;
 }
 
 .expandCollapse {
@@ -92,12 +82,20 @@
 }
 
 @include bp-small {
+  .root {
+    --icon-size: 1.75rem;
+  }
+
   .expandCollapse {
     width: 7.5rem;
   }
 }
 
 @include bp-medium {
+  .root {
+    --icon-size: 2rem;
+  }
+
   .expandCollapse {
     width: 8rem;
   }
