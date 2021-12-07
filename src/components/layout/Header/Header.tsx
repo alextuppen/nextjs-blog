@@ -53,14 +53,14 @@ const DropDown = () => {
         <div className={styles.menu}>
           <div className={styles.menuInternal}>
             {internalLinks.map(({ link, text }) => (
-              <MenuItem {...menu} as={Button} href={link}>
+              <MenuItem {...menu} as={Button} href={link} key={link}>
                 <span>{text}</span>
               </MenuItem>
             ))}
             <MenuSeparator {...menu} className={styles.menuSeperator} />
           </div>
           {externalLinks.map(({ link, text }) => (
-            <MenuItem {...menu} as={Button} href={link} external>
+            <MenuItem {...menu} as={Button} href={link} external key={link}>
               <span>{text}</span>
             </MenuItem>
           ))}
@@ -98,7 +98,7 @@ export const Header = () => {
           <div className={styles.links}>
             <div className={styles.toolbarInternal}>
               {internalLinks.map(({ link, text }) => (
-                <ToolbarItem {...toolbar} as={Button} href={link}>
+                <ToolbarItem {...toolbar} as={Button} href={link} key={link}>
                   <span>{text}</span>
                 </ToolbarItem>
               ))}
@@ -109,7 +109,13 @@ export const Header = () => {
                 className={styles.toolbarSeperator}
               />
               {externalLinks.map(({ link, text }) => (
-                <ToolbarItem {...toolbar} as={Button} href={link} external>
+                <ToolbarItem
+                  {...toolbar}
+                  as={Button}
+                  href={link}
+                  external
+                  key={link}
+                >
                   <span>{text}</span>
                 </ToolbarItem>
               ))}

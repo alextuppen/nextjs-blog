@@ -1,4 +1,6 @@
-export const technologiesLookup = {
+import { TechnologiesLookup } from "./Technologies.types";
+
+export const technologiesLookup: TechnologiesLookup = {
   apollo: {
     src: "/icons/frameworks/apollo.svg",
     title: "Apollo GraphQL",

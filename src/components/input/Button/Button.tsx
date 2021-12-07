@@ -50,6 +50,8 @@ export const Button: FC<ButtonProps> = ({
     }
     return (
       <Link href={href}>
+        {/* href passed to anchor tag automatically by Link */}
+        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
         <a className={classes} style={style}>
           {icon || children}
         </a>

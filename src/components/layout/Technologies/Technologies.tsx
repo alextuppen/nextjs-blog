@@ -42,7 +42,7 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
 
   return (
     <Button
-      // @ts-ignore - --count is a CSS constiable and so not part of CSSProperties type
+      // @ts-ignore - --count is a CSS variable and so not part of CSSProperties type
       style={{ "--count": count }}
       className={styles.root}
       onClick={handleExpandCollapse}
@@ -50,7 +50,7 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
       <div className={styles.wrapper}>
         <div className={styles.icons}>
           {lookedUpTechs.map((tech) => (
-            <div className={styles.iconWrapper}>
+            <div className={styles.iconWrapper} key={tech.title}>
               <Image
                 src={tech.src}
                 alt={tech.alt}
@@ -69,7 +69,7 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
             }}
           >
             {lookedUpTechs.map((tech) => (
-              <li className={styles.listItem}>
+              <li className={styles.listItem} key={tech.title}>
                 <div className={styles.listItemContent}>
                   <div className={styles.iconWrapper}>
                     <Image
