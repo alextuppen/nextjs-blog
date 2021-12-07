@@ -1,14 +1,15 @@
+import type { AppProps } from "next/app";
 import { Provider } from "reakit";
 import { Footer, Header } from "@layout";
 import "normalize.css";
 import "../styles/root.scss";
 
-export default function MyApp({ Component, pageProps }) {
-  return (
-    <Provider>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
-    </Provider>
-  );
-}
+const MyApp = ({ Component, pageProps }: AppProps) => (
+  <Provider>
+    <Header />
+    <Component {...pageProps} />
+    <Footer />
+  </Provider>
+);
+
+export default MyApp;

@@ -37,24 +37,29 @@ export const Button: FC<ButtonProps> = ({
   if (href) {
     if (external) {
       return (
-        <a className={classes} href={href} target="_blank" style={style}>
-          {icon ? icon : children}
+        <a
+          className={classes}
+          href={href}
+          target="_blank"
+          style={style}
+          rel="noreferrer"
+        >
+          {icon || children}
         </a>
       );
-    } else {
-      return (
-        <Link href={href}>
-          <a className={classes} style={style}>
-            {icon ? icon : children}
-          </a>
-        </Link>
-      );
     }
+    return (
+      <Link href={href}>
+        <a className={classes} style={style}>
+          {icon || children}
+        </a>
+      </Link>
+    );
   }
 
   return (
     <RButton className={classes} onClick={onClick} style={style}>
-      {icon ? icon : children}
+      {icon || children}
     </RButton>
   );
 };

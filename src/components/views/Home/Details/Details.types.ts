@@ -6,6 +6,6 @@ interface Details {
   roleType: string;
 }
 
-export interface RoleDetailsProps {
+export interface DetailsProps {
   details: Details;
 }

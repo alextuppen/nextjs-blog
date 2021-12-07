@@ -1,4 +1,4 @@
-export default {
+export const technologiesLookup = {
   apollo: {
     src: "/icons/frameworks/apollo.svg",
     title: "Apollo GraphQL",

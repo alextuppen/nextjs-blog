@@ -1,9 +1,9 @@
-import { RoleDetailsProps } from "./RoleDetails.types";
-import styles from "./RoleDetails.module.scss";
+import { DetailsProps } from "./Details.types";
+import styles from "./Details.module.scss";
 
-export const RoleDetails = ({
+export const Details = ({
   details: { title, organisation, location, dateRange, roleType },
-}: RoleDetailsProps) => (
+}: DetailsProps) => (
   <div className={styles.root}>
     <h3 className={styles.title}>{title}</h3>
     <div className={styles.details}>

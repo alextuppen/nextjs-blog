@@ -1,9 +1,10 @@
+import { FC } from "react";
 import Image from "next/image";
 import { Button } from "@input";
 import { URL_LINKEDIN, URL_INSTAGRAM, URL_GITHUB } from "@constants";
 import styles from "./HeroGrid.module.scss";
 
-export const HeroGrid = () => (
+export const HeroGrid: FC = () => (
   <div className={styles.root}>
     <div className={styles.bgWrap}>
       <Image

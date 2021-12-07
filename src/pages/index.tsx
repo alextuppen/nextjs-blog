@@ -1,8 +1,7 @@
 import Head from "next/head";
-import { Home } from "../components/views/Home/Home";
+import { Home } from "@views";
 
-export default function HomePage() {
-  return (
+const HomePage = () => (
     <>
       <Head>
         <title>Alex Tuppen</title>
@@ -12,4 +11,5 @@ export default function HomePage() {
       </main>
     </>
   );
-}
+
+export default HomePage;

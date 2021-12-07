@@ -1,4 +1,4 @@
-export default [
+export const experiences = [
   {
     details: {
       title: "Full stack engineer",
@@ -54,7 +54,7 @@ export default [
       "css",
     ],
     description: [
-      "Member of a number of teams working on a variety of different projects covering the last 3 years of ",
+      "Member of a number of teams working on a constiety of different projects covering the last 3 years of ",
       "JavaScript technologies including a legacy in house developed SSR and BFF platform, a Next.JS, Gastby.JS,  ",
       "and Material UI monorepo, a React Native Android app and a new REST API built using clean architecture. ",
       "Being a much larger company than any of my previous employers WorldRemit has presented a number of new ",
@@ -163,5 +163,41 @@ export default [
       "imaging for desktop deployments using WDS, providing assistance to infrastructure engineer with networking ",
       "and server estate, hardware procurement and stock management.",
     ],
+  },
+];
+
+export const projects = [
+  {
+    title: "alextuppen.com",
+    technologies: [
+      "aws",
+      "git",
+      "yarn",
+      "eslint",
+      "prettier",
+      "nextjs",
+      "react",
+      "typescript",
+      "html",
+      "css",
+    ],
+    description: [],
+  },
+];
+
+export const education = [
+  {
+    title: "BA Hons Business Management",
+    organisation: "The University of Derby",
+    location: "Derby",
+    dateRange: "2009 - 2013",
+    roleType: "Full time student",
+  },
+  {
+    title: "Economics, Business Studies, Physics, Chemistry and Maths",
+    organisation: "Colchester Sixth College",
+    location: "Colchester",
+    dateRange: "2006 - 2008",
+    roleType: "Full time student",
   },
 ];

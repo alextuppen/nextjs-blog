@@ -7,7 +7,7 @@ import { BP_QUERY_SMALL } from "@constants";
 import { Button } from "@input";
 import { Divider } from "@layout";
 import { TechnologiesProps } from "./Technologies.types";
-import techLookup from "./technologiesLookup";
+import { technologiesLookup } from "./technologiesLookup";
 import styles from "./Technologies.module.scss";
 
 export const Technologies = ({ technologies }: TechnologiesProps) => {
@@ -27,22 +27,22 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
   const lookedUpTechs = technologies.map((tech) => {
     if (typeof tech === "string") {
       return {
-        src: techLookup[tech].src,
-        title: techLookup[tech].title,
-        alt: techLookup[tech].alt,
-      };
-    } else {
-      return {
-        src: techLookup[tech.lookUp].src,
-        title: tech.title,
-        alt: tech.alt,
+        src: technologiesLookup[tech].src,
+        title: technologiesLookup[tech].title,
+        alt: technologiesLookup[tech].alt,
       };
     }
+
+    return {
+      src: technologiesLookup[tech.lookUp].src,
+      title: tech.title,
+      alt: tech.alt,
+    };
   });
 
   return (
     <Button
-      // @ts-ignore - --count is a CSS variable and so not part of CSSProperties type
+      // @ts-ignore - --count is a CSS constiable and so not part of CSSProperties type
       style={{ "--count": count }}
       className={styles.root}
       onClick={handleExpandCollapse}
