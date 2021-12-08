@@ -47,7 +47,6 @@
     grid-template-areas:
       "organisation time"
       "location type";
-    justify-content: space-between;
   }
 }
 
@@ -59,12 +58,13 @@
 
 @include bp-large {
   .details {
-    width: 60%;
+    grid-template-areas: "organisation time location type";
+    width: 90%;
   }
 }
 
 @include bp-xl {
   .details {
-    width: 50%;
+    width: 80%;
   }
 }

@@ -1,0 +1,80 @@
+@import "src/styles/globals";
+
+.root {
+  height: 90vh;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "logo"
+    "text";
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+  gap: var(--padding-double);
+}
+
+.logo {
+  position: relative;
+  grid-area: "logo";
+  --logo-width: 10rem;
+  width: var(--logo-width);
+  height: calc(var(--logo-width) * 1.5);
+}
+
+.textWrapper {
+  grid-area: "text";
+  display: flex;
+  flex-direction: column;
+}
+
+.code {
+  font-size: 5rem;
+}
+
+.text {
+  margin: unset;
+}
+
+@include bp-small {
+  .logo {
+    --logo-width: 12rem;
+  }
+
+  .code {
+    font-size: 6.5rem;
+  }
+}
+
+@include bp-medium {
+  .grid {
+    grid-template-areas: "logo text";
+  }
+
+  .code {
+    font-size: 7rem;
+  }
+}
+
+@include bp-large {
+  .logo {
+    --logo-width: 14rem;
+  }
+
+  .code {
+    font-size: 10rem;
+  }
+}
+
+@include bp-xl {
+  .logo {
+    --logo-width: 16rem;
+  }
+
+  .code {
+    font-size: 12rem;
+  }
+}
