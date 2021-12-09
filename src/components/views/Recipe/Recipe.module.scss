@@ -1,0 +1,26 @@
+@import "src/styles/globals";
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "description" "ingredients" "method";
+  gap: var(--padding-double);
+}
+
+.description,
+.ingredients,
+.method {
+  @include elev-1();
+}
+
+.description {
+  grid-area: "description";
+}
+
+.ingredients {
+  grid-area: "ingredients";
+}
+
+.method {
+  grid-area: "method";
+}

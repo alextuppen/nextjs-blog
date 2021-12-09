@@ -20,7 +20,8 @@
       "@input": ["./components/input"],
       "@layout": ["./components/layout"],
       "@views": ["./components/views"],
-      "@types": ["./types"]
+      "@types": ["./types"],
+      "@utils": ["./utils"]
     }
   },
   "include": [

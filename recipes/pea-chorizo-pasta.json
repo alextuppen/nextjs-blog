@@ -13,7 +13,7 @@
   "cookTime": "PT20M",
   "totalTime": "PT30M",
   "keywords": "quick, easy, midweek, weeknight, pea, chorizo, pasta",
-  "recipeYield": "2",
+  "recipeYield": 2,
   "recipeCategory": "Weeknight meal",
   "recipeIngredient": [
     "300g frozen peas",
