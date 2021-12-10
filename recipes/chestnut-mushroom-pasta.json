@@ -61,12 +61,8 @@
   "recipeInstructions": [
     {
       "@type": "HowToStep",
-      "name": "Roughly chop chestnuts, mushrooms and onion",
+      "name": "Roughly chop half the chestnuts, mushrooms and the whole onion",
       "itemListElement": [
-        {
-          "@type": "HowToDirection",
-          "text": "Roughly chop half the chestnuts, mushrooms and the whole onion."
-        },
         {
           "@type": "HowToTip",
           "text": "The roughly chopped ingredients will be blended until smooth, it is a good idea to remove and roughly chop all of the mushroom stalks as these are tougher than the caps."
@@ -85,8 +81,7 @@
     },
     {
       "@type": "HowToStep",
-      "name": "Dice chestnuts and mushrooms",
-      "text": "Evenly dice the remaining chestnuts and mushrooms."
+      "name": "Evenly dice the remaining chestnuts and mushrooms"
     },
     {
       "@type": "HowToStep",
@@ -95,12 +90,8 @@
     },
     {
       "@type": "HowToStep",
-      "name": "Chop parsley",
+      "name": "Chop the parsley and set aside",
       "itemListElement": [
-        {
-          "@type": "HowToDirection",
-          "text": "Chop the parsley and set aside."
-        },
         {
           "@type": "HowToTip",
           "text": "Parsley stalks are tougher than leaves, so chop them off and add them to the blender."
@@ -119,8 +110,7 @@
     },
     {
       "@type": "HowToStep",
-      "name": "Serve",
-      "text": "Plate and grate parmessan over to taste, serve."
+      "name": "Plate and grate parmessan over to taste, serve"
     }
   ]
 }

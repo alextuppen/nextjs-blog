@@ -8,7 +8,7 @@
 }
 
 .description,
-.ingredients,
+.toolsIngredientsWrapper,
 .method {
   @include elev-1();
 }
@@ -17,10 +17,72 @@
   grid-area: "description";
 }
 
-.ingredients {
+.descriptionItems {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-half);
+}
+
+.descriptionItem {
+  display: flex;
+  align-items: center;
+  gap: var(--padding-half);
+}
+
+.descriptionItem > svg {
+  font-size: 1.5rem;
+}
+
+.toolsIngredientsWrapper {
   grid-area: "ingredients";
+}
+
+.toolsIngredients {
+  width: 100%;
+}
+
+.toolsIngredients > ul {
+  list-style-image: url("/icons/misc/chevronRight.svg");
 }
 
 .method {
   grid-area: "method";
+  gap: 0;
+}
+
+.toolsIngredients > ul,
+.method > ol {
+  margin: var(--padding) 0;
+  // padding-left: var(--padding);
+  padding-left: 0;
+  list-style-position: inside;
+  color: $text;
+  text-align: left;
+}
+
+.method > ol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-double);
+}
+
+.method > ol > li > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-half);
+}
+
+.tipIcon {
+  margin: 0 var(--padding-half) var(--padding-half) 0;
+  float: left;
+  font-size: 1.5rem;
+}
+
+.tip {
+  display: flex;
+  gap: var(--padding-half);
+}
+
+.tip > * {
+  flex-shrink: 0;
 }

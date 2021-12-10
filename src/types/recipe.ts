@@ -1,13 +1,10 @@
-interface InstructionStep {
+interface InstructionStepCommon {
   "@type": "HowToStep";
   name: string;
-  text: string;
 }
 
-interface InstructionStepWithTip {
-  "@type": "HowToStep";
-  name: string;
-  itemListElement: HowToDirection[] | HowToTip[];
+interface InstructionStep extends InstructionStepCommon {
+  text: string;
 }
 
 interface HowToDirection {
@@ -18,6 +15,10 @@ interface HowToDirection {
 interface HowToTip {
   "@type": "HowToTip";
   text: string;
+}
+
+interface InstructionStepWithTip extends InstructionStepCommon {
+  itemListElement: Array<HowToDirection | HowToTip>;
 }
 
 export interface IRecipe {
@@ -37,5 +38,5 @@ export interface IRecipe {
   recipeCategory: string;
   recipeIngredient: string[];
   tool: { "@type": "HowToTool"; name: string }[];
-  recipeInstructions: InstructionStep[] | InstructionStepWithTip[];
+  recipeInstructions: Array<InstructionStep | InstructionStepWithTip>;
 }

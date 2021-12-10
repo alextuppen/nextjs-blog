@@ -13,7 +13,7 @@
   "cookTime": "PT20M",
   "totalTime": "PT30M",
   "keywords": "quick, easy, midweek, weeknight, pea, chorizo, pasta",
-  "recipeYield": 2,
+  "recipeYield": 4,
   "recipeCategory": "Weeknight meal",
   "recipeIngredient": [
     "300g frozen peas",
@@ -21,7 +21,7 @@
     "1 chorizo",
     "270ml single cream",
     "300g pasta",
-    "30g fresh flat leaf parsley - optional",
+    "30g fresh flat leaf parsley (optional)",
     "4tbsp vegetable oil",
     "1 chicken stock pot/cube",
     "freshly ground black pepper",
@@ -57,13 +57,22 @@
   "recipeInstructions": [
     {
       "@type": "HowToStep",
-      "name": "Steam peas",
-      "text": "Place the peas in a microwavable steamer and cook according to packet instructions."
+      "name": "Cook pasta",
+      "text": "Bring a saucepan of water to the boil and begin cooking the pasta."
     },
     {
       "@type": "HowToStep",
-      "name": "Cook pasta",
-      "text": "Bring a saucepan of water to the boil and begin cooking the pasta."
+      "name": "Steam peas",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Place the peas in a microwavable steamer and cook according to packet instructions."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Stir the peas half way through cooking to ensure they cook evenly."
+        }
+      ]
     },
     {
       "@type": "HowToStep",
