@@ -143,11 +143,13 @@ export const Recipe: FC<RecipeProps> = ({
                     switch (element["@type"]) {
                       case "HowToDirection":
                         return (
-                          <p className={styles.methodText}>{element.text}</p>
+                          <p className={styles.methodText} key={element.text}>
+                            {element.text}
+                          </p>
                         );
                       case "HowToTip":
                         return (
-                          <div className={styles.methodTip}>
+                          <div className={styles.methodTip} key={element.text}>
                             <div className={styles.tipTitle}>
                               <FaLightbulb />
                               <h5>Tip</h5>
