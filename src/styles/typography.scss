@@ -9,6 +9,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 span,
 blockquote,
 p {
@@ -35,6 +36,11 @@ h4 {
   font-size: 1.2rem;
 }
 
+h5 {
+  font-size: 1.1rem;
+  text-decoration: underline;
+}
+
 p,
 span,
 blockquote,
@@ -54,6 +60,10 @@ td {
 
   h4 {
     font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
   }
 
   p,
@@ -78,6 +88,10 @@ td {
     font-size: 1.5rem;
   }
 
+  h5 {
+    font-size: 1.4rem;
+  }
+
   p,
   span,
   blockquote,
@@ -98,6 +112,10 @@ td {
 
   h4 {
     font-size: 1.75rem;
+  }
+
+  h5 {
+    font-size: 1.6rem;
   }
 
   p,

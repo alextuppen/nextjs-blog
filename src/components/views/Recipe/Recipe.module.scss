@@ -9,15 +9,16 @@
 
 .description,
 .toolsIngredientsWrapper,
-.method {
+.methodCard {
   @include elev-1();
 }
 
 .description {
-  grid-area: "description";
+  grid-area: description;
 }
 
 .descriptionItems {
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: var(--padding-half);
@@ -26,7 +27,7 @@
 .descriptionItem {
   display: flex;
   align-items: center;
-  gap: var(--padding-half);
+  gap: var(--padding);
 }
 
 .descriptionItem > svg {
@@ -34,55 +35,80 @@
 }
 
 .toolsIngredientsWrapper {
-  grid-area: "ingredients";
+  grid-area: ingredients;
 }
 
 .toolsIngredients {
   width: 100%;
 }
 
-.toolsIngredients > ul {
-  list-style-image: url("/icons/misc/chevronRight.svg");
-}
-
 .method {
-  grid-area: "method";
+  grid-area: method;
   gap: 0;
 }
 
-.toolsIngredients > ul,
-.method > ol {
-  margin: var(--padding) 0;
-  // padding-left: var(--padding);
+.list,
+.methods {
   padding-left: 0;
-  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
   color: $text;
   text-align: left;
 }
 
-.method > ol {
-  display: flex;
-  flex-direction: column;
-  gap: var(--padding-double);
-}
-
-.method > ol > li > div {
-  display: flex;
-  flex-direction: column;
+.list {
+  margin: var(--padding) 0;
   gap: var(--padding-half);
 }
 
-.tipIcon {
-  margin: 0 var(--padding-half) var(--padding-half) 0;
-  float: left;
-  font-size: 1.5rem;
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: var(--padding);
 }
 
-.tip {
+.listIcon {
+  position: relative;
+  --bullet-point-height: 0.8rem;
+  width: calc(var(--bullet-point-height) * 1.5);
+  height: var(--bullet-point-height);
+}
+
+.methods {
+  gap: var(--padding-triple);
+  counter-reset: method;
+}
+
+.method {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-half);
+  counter-increment: method;
+}
+
+.methodTitle {
   display: flex;
   gap: var(--padding-half);
 }
 
-.tip > * {
-  flex-shrink: 0;
+.methodTitle::before {
+  content: counter(method) ".";
+}
+
+.methodTip {
+  display: flex;
+  margin-top: var(--padding);
+  padding: var(--padding-half);
+  @include elev-3();
+  flex-direction: column;
+  gap: var(--padding-half);
+  border: var(--border-width) solid $secondary;
+  border-radius: var(--border-radius);
+}
+
+.tipTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--padding-half);
 }

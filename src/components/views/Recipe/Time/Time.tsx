@@ -13,9 +13,8 @@ export const Time: FC<TimeProps> = ({ className, type, time }) => {
       {type === TimeType.prep && <RiKnifeFill />}
       {type === TimeType.cook && <GiCookingPot />}
       {type === TimeType.total && <BiTimeFive />}
-      <span>{`${type} time:`}</span>
       {Object.entries(duration).map(([key, value]) => (
-        <span key={key}>{`${value} ${key}`}</span>
+        <span key={key}>{`${type} time: ${value} ${key}`}</span>
       ))}
     </span>
   );
