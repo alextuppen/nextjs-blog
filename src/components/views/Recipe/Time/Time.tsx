@@ -5,17 +5,17 @@ import { GiCookingPot } from "react-icons/gi";
 import { RiKnifeFill } from "react-icons/ri";
 import { TimeType, TimeProps } from "./Time.types";
 
-export const Time: FC<TimeProps> = ({ className, type, time }) => {
+export const Time: FC<TimeProps> = ({ type, time }) => {
   const duration = Duration.fromISO(time).toObject();
 
   return (
-    <span className={className}>
+    <>
       {type === TimeType.prep && <RiKnifeFill />}
       {type === TimeType.cook && <GiCookingPot />}
       {type === TimeType.total && <BiTimeFive />}
       {Object.entries(duration).map(([key, value]) => (
         <span key={key}>{`${type} time: ${value} ${key}`}</span>
       ))}
-    </span>
+    </>
   );
 };

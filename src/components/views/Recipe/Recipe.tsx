@@ -4,13 +4,44 @@ import { DateTime } from "luxon";
 import { BsFillCalendarFill } from "react-icons/bs";
 import { FaLightbulb } from "react-icons/fa";
 import { GiKnifeFork } from "react-icons/gi";
+import { useMediumMediaQuery } from "hooks";
 import { Card, Section } from "@layout";
 import { Time, TimeType } from "./Time";
-import { RecipeProps } from "./Recipe.types";
+import { TimesProps, YeildPublishedProps, RecipeProps } from "./Recipe.types";
 import styles from "./Recipe.module.scss";
 
+const Times: FC<TimesProps> = ({ prepTime, cookTime, totalTime }) => (
+  <>
+    <li className={styles.descriptionItem}>
+      <Time type={TimeType.prep} time={prepTime} />
+    </li>
+    <li className={styles.descriptionItem}>
+      <Time type={TimeType.cook} time={cookTime} />
+    </li>
+    <li className={styles.descriptionItem}>
+      <Time type={TimeType.total} time={totalTime} />
+    </li>
+  </>
+);
+
+const YeildPublished: FC<YeildPublishedProps> = ({
+  recipeYield,
+  datePublished,
+}) => (
+  <>
+    <li className={styles.descriptionItem}>
+      <GiKnifeFork />
+      <span>Serves: {recipeYield}</span>
+    </li>
+    <li className={styles.descriptionItem}>
+      <BsFillCalendarFill />
+      <span>Published: {DateTime.fromISO(datePublished).toLocaleString()}</span>
+    </li>
+  </>
+);
+
 const ListIcon = () => (
-  <div className={styles.listIcon}>
+  <div className={styles.toolsIngredientsIcon}>
     <Image
       src="/logo/bulletPoints/white.svg"
       alt="Bullet point"
@@ -20,8 +51,8 @@ const ListIcon = () => (
   </div>
 );
 
-export const Recipe: FC<RecipeProps> = ({ recipe }) => {
-  const {
+export const Recipe: FC<RecipeProps> = ({
+  recipe: {
     name,
     datePublished,
     description,
@@ -32,50 +63,54 @@ export const Recipe: FC<RecipeProps> = ({ recipe }) => {
     recipeIngredient,
     tool,
     recipeInstructions,
-  } = recipe;
-
-  console.log(recipe);
+  },
+}) => {
+  const isMediumBP = useMediumMediaQuery();
 
   return (
     <Section>
       <h2>{name}</h2>
       <div className={styles.grid}>
-        <Card className={styles.description}>
-          <p>{description}</p>
+        <Card className={styles.descriptionCard}>
           <div className={styles.descriptionItems}>
-            <Time
-              className={styles.descriptionItem}
-              type={TimeType.prep}
-              time={prepTime}
-            />
-            <Time
-              className={styles.descriptionItem}
-              type={TimeType.cook}
-              time={cookTime}
-            />
-            <Time
-              className={styles.descriptionItem}
-              type={TimeType.total}
-              time={totalTime}
-            />
-            <span className={styles.descriptionItem}>
-              <GiKnifeFork />
-              <span>Serves: {recipeYield}</span>
-            </span>
-            <span className={styles.descriptionItem}>
-              <BsFillCalendarFill />
-              <span>
-                Published: {DateTime.fromISO(datePublished).toLocaleString()}
-              </span>
-            </span>
+            <p>{description}</p>
+            {!isMediumBP ? (
+              <ul className={styles.descriptionItemsList}>
+                <Times
+                  prepTime={prepTime}
+                  cookTime={cookTime}
+                  totalTime={totalTime}
+                />
+                <YeildPublished
+                  recipeYield={recipeYield}
+                  datePublished={datePublished}
+                />
+              </ul>
+            ) : (
+              <>
+                <ul className={styles.descriptionItemsList}>
+                  <Times
+                    prepTime={prepTime}
+                    cookTime={cookTime}
+                    totalTime={totalTime}
+                  />
+                </ul>
+                <ul className={styles.descriptionItemsList}>
+                  <YeildPublished
+                    recipeYield={recipeYield}
+                    datePublished={datePublished}
+                  />
+                </ul>
+              </>
+            )}
           </div>
         </Card>
-        <Card className={styles.toolsIngredientsWrapper}>
+        <Card className={styles.toolsIngredientsCard}>
           <div className={styles.toolsIngredients}>
             <h3>Tools</h3>
-            <ul className={styles.list}>
+            <ul className={styles.toolsIngredientsList}>
               {tool.map((tl) => (
-                <li className={styles.listItem} key={tl.name}>
+                <li className={styles.toolsIngredientsItem} key={tl.name}>
                   <ListIcon />
                   <span>{tl.name}</span>
                 </li>
@@ -84,9 +119,9 @@ export const Recipe: FC<RecipeProps> = ({ recipe }) => {
           </div>
           <div className={styles.toolsIngredients}>
             <h3>Ingredients</h3>
-            <ul className={styles.list}>
+            <ul className={styles.toolsIngredientsList}>
               {recipeIngredient.map((ingredient) => (
-                <li className={styles.listItem} key={ingredient}>
+                <li className={styles.toolsIngredientsItem} key={ingredient}>
                   <ListIcon />
                   <span>{ingredient}</span>
                 </li>

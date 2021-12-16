@@ -7,68 +7,53 @@
   gap: var(--padding-double);
 }
 
-.description,
-.toolsIngredientsWrapper,
+.descriptionCard,
+.toolsIngredientsCard,
 .methodCard {
   @include elev-1();
 }
 
-.description {
+.descriptionCard {
   grid-area: description;
 }
 
-.descriptionItems {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.toolsIngredientsCard {
+  grid-area: ingredients;
+}
+
+.methodCard {
+  grid-area: method;
+}
+
+.descriptionItems,
+.toolsIngredients {
+  width: 75%;
+}
+
+.descriptionItemsList,
+.toolsIngredientsList {
+  margin-top: var(--padding);
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: var(--padding-half);
 }
 
-.descriptionItem {
+.descriptionItem,
+.toolsIngredientsItem {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   gap: var(--padding);
+  color: $text;
+  text-align: left;
 }
 
 .descriptionItem > svg {
   font-size: 1.5rem;
 }
 
-.toolsIngredientsWrapper {
-  grid-area: ingredients;
-}
-
-.toolsIngredients {
-  width: 100%;
-}
-
-.method {
-  grid-area: method;
-  gap: 0;
-}
-
-.list,
-.methods {
-  padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  list-style-type: none;
-  color: $text;
-  text-align: left;
-}
-
-.list {
-  margin: var(--padding) 0;
-  gap: var(--padding-half);
-}
-
-.listItem {
-  display: flex;
-  align-items: center;
-  gap: var(--padding);
-}
-
-.listIcon {
+.toolsIngredientsIcon {
   position: relative;
   --bullet-point-height: 0.8rem;
   width: calc(var(--bullet-point-height) * 1.5);
@@ -76,14 +61,20 @@
 }
 
 .methods {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
   gap: var(--padding-triple);
   counter-reset: method;
+  list-style-type: none;
+  color: $text;
+  text-align: left;
 }
 
 .method {
   display: flex;
   flex-direction: column;
-  gap: var(--padding-half);
+  gap: var(--padding);
   counter-increment: method;
 }
 
@@ -98,9 +89,8 @@
 
 .methodTip {
   display: flex;
-  margin-top: var(--padding);
   padding: var(--padding-half);
-  @include elev-3();
+  @include elev-6();
   flex-direction: column;
   gap: var(--padding-half);
   border: var(--border-width) solid $secondary;
@@ -111,4 +101,43 @@
   display: flex;
   align-items: center;
   gap: var(--padding-half);
+}
+
+@include bp-small {
+  .descriptionItems,
+  .toolsIngredients {
+    width: 90%;
+  }
+
+  .descriptionItemsList,
+  .toolsIngredientsList {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include bp-medium {
+  .descriptionItems,
+  .toolsIngredients {
+    width: 100%;
+  }
+
+  .descriptionItemsList {
+    display: flex;
+    justify-content: center;
+    gap: var(--padding-double);
+  }
+
+  .toolsIngredientsList {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@include bp-large {
+  .grid {
+    grid-template-areas: "description description" "ingredients method" "blank method";
+  }
+
+  .toolsIngredientsList {
+    grid-template-columns: 1fr;
+  }
 }

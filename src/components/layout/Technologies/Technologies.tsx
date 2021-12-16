@@ -2,8 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import AnimateHeight from "react-animate-height";
 import { BsChevronDoubleDown, BsChevronDoubleUp } from "react-icons/bs";
-import { useMediaQuery } from "hooks";
-import { BP_QUERY_SMALL } from "@constants";
+import { useSmallMediaQuery } from "hooks";
 import { Button } from "@input";
 import { Divider } from "@layout";
 import { TechnologiesProps } from "./Technologies.types";
@@ -12,7 +11,7 @@ import styles from "./Technologies.module.scss";
 
 export const Technologies = ({ technologies }: TechnologiesProps) => {
   const [height, setHeight] = useState<number | string>(0);
-  const isSmallBP = useMediaQuery(BP_QUERY_SMALL);
+  const isSmallBP = useSmallMediaQuery();
 
   const count = technologies.length;
 

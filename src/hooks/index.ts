@@ -1,1 +1,6 @@
-export { useMediaQuery } from "./useMediaQuery";
+export {
+  useSmallMediaQuery,
+  useMediumMediaQuery,
+  useLargeMediaQuery,
+  useXlediaQuery,
+} from "./useMediaQuery";
