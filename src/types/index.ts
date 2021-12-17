@@ -1,2 +1,2 @@
 export type { ComponentCommon } from "./common";
-export type { IRecipe } from "./recipe";
+export type { KeywordsByRecipe, RecipeSynopsis, IRecipe } from "./recipe";

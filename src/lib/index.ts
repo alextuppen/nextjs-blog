@@ -1,5 +1,5 @@
 export {
-  getSortedRecipesData,
+  getSortedRecipesSynopsis,
   getRecipeData,
   getAllRecipeIds,
 } from "./recipeData";

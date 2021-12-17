@@ -21,19 +21,26 @@ interface InstructionStepWithTip extends InstructionStepCommon {
   itemListElement: Array<HowToDirection | HowToTip>;
 }
 
-export interface IRecipe {
+export interface KeywordsByRecipe {
+  [key: string]: string[];
+}
+
+export interface RecipeSynopsis {
   id: string;
-  "@context": "https://schema.org/";
-  "@type": "Recipe";
   name: string;
-  image: string[];
-  author: { "@type": "Person"; name: string };
   datePublished: string;
   description: string;
+  keywords: string;
+}
+
+export interface IRecipe extends RecipeSynopsis {
+  "@context": "https://schema.org/";
+  "@type": "Recipe";
+  image: string[];
+  author: { "@type": "Person"; name: string };
   prepTime: string;
   cookTime: string;
   totalTime: string;
-  keywords: string;
   recipeYield: number;
   recipeCategory: string;
   recipeIngredient: string[];

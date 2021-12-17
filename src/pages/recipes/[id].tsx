@@ -4,19 +4,19 @@ import { ParsedUrlQuery } from "querystring";
 import Head from "next/head";
 import { Recipe } from "@views";
 import { IRecipe } from "@types";
-import { getRecipeData, getAllRecipeIds } from "@utils";
+import { getRecipeData, getAllRecipeIds } from "@lib";
 
 interface RecipePageProps {
-  postData: IRecipe;
+  recipe: IRecipe;
 }
 
-const RecipePage: FC<RecipePageProps> = ({ postData }) => (
+const RecipePage: FC<RecipePageProps> = ({ recipe }) => (
   <>
     <Head>
-      <title>Alex Tuppen - {postData.name}</title>
+      <title>Alex Tuppen | {recipe.name}</title>
     </Head>
     <main>
-      <Recipe recipe={postData} />
+      <Recipe recipe={recipe} />
     </main>
   </>
 );
@@ -34,11 +34,11 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { id } = params as ParsedUrlQuery;
-  const postData = getRecipeData(id);
+  const recipe = getRecipeData(id);
 
   return {
     props: {
-      postData,
+      recipe,
     },
   };
 };

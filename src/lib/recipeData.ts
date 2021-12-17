@@ -3,18 +3,30 @@ import path from "path";
 
 const recipesDirectory = path.join(process.cwd(), "recipes");
 
-export const getSortedRecipesData = () => {
+const getFileContentsWithSplitKeywords = (fullPath: string) => {
+  const { keywords, ...rest } = JSON.parse(fs.readFileSync(fullPath, "utf8"));
+  const splitKeywords = keywords.split(", ");
+
+  return {
+    keywords: splitKeywords,
+    ...rest,
+  };
+};
+
+export const getSortedRecipesSynopsis = () => {
   const fileNames = fs.readdirSync(recipesDirectory);
 
   const allRecipesData = fileNames.map((fileName) => {
-    const id = fileName.replace(/\.json$/, "");
-
     const fullPath = path.join(recipesDirectory, fileName);
-    const fileContents = JSON.parse(fs.readFileSync(fullPath, "utf8"));
+    const { name, datePublished, description, keywords } =
+      getFileContentsWithSplitKeywords(fullPath);
 
     return {
-      id,
-      ...fileContents,
+      id: fileName.replace(/\.json$/, ""),
+      name,
+      datePublished,
+      description,
+      keywords,
     };
   });
 
@@ -29,12 +41,7 @@ export const getSortedRecipesData = () => {
 
 export const getRecipeData = (id: string | string[] | undefined) => {
   const fullPath = path.join(recipesDirectory, `${id}.json`);
-  const fileContents = JSON.parse(fs.readFileSync(fullPath, "utf8"));
-
-  return {
-    id,
-    ...fileContents,
-  };
+  return getFileContentsWithSplitKeywords(fullPath);
 };
 
 export const getAllRecipeIds = () => {

@@ -17,11 +17,11 @@
     "paths": {
       "@constants": ["./constants"],
       "@hooks": ["./hooks"],
+      "@lib": ["./lib"],
       "@input": ["./components/input"],
       "@layout": ["./components/layout"],
       "@views": ["./components/views"],
-      "@types": ["./types"],
-      "@utils": ["./utils"]
+      "@types": ["./types"]
     }
   },
   "include": [
