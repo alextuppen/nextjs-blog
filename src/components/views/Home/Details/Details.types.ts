@@ -1,5 +1,4 @@
 interface Details {
-  title: string;
   organisation: string;
   location: string;
   dateRange: string;
@@ -7,5 +6,6 @@ interface Details {
 }
 
 export interface DetailsProps {
-  details: Details;
+  title: string;
+  details?: Details;
 }

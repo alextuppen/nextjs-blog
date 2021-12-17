@@ -1,7 +1,7 @@
 export const experiences = [
   {
+    title: "Full stack engineer",
     details: {
-      title: "Full stack engineer",
       organisation: "HeadBox",
       location: "London",
       dateRange: "October 2021 - Present",
@@ -27,8 +27,8 @@ export const experiences = [
     description: [],
   },
   {
+    title: "Full stack engineer",
     details: {
-      title: "Full stack engineer",
       organisation: "WorldRemit",
       location: "London",
       dateRange: "March 2020 - October 2021",
@@ -66,8 +66,8 @@ export const experiences = [
     ],
   },
   {
+    title: "Founder",
     details: {
-      title: "Founder",
       organisation: "Armicus",
       location: "London",
       dateRange: "August 2018 - March 2020",
@@ -101,8 +101,8 @@ export const experiences = [
     ],
   },
   {
+    title: "Developer",
     details: {
-      title: "Developer",
       organisation: "PowerON Platforms",
       location: "London",
       dateRange: "September 2016 - August 2018",
@@ -132,8 +132,8 @@ export const experiences = [
     ],
   },
   {
+    title: "Support Engineer",
     details: {
-      title: "Support Engineer",
       organisation: "Cireson",
       location: "London",
       dateRange: "August 2015 - September 2016",
@@ -149,8 +149,8 @@ export const experiences = [
     ],
   },
   {
+    title: "Senior Technical analyst",
     details: {
-      title: "Senior Technical analyst",
       organisation: "Rocksteady Studios Ltd",
       location: "London",
       dateRange: "May 2013 - August 2015",
@@ -188,16 +188,20 @@ export const projects = [
 export const education = [
   {
     title: "BA Hons Business Management",
-    organisation: "The University of Derby",
-    location: "Derby",
-    dateRange: "2009 - 2013",
-    roleType: "Full time student",
+    details: {
+      organisation: "The University of Derby",
+      location: "Derby",
+      dateRange: "2009 - 2013",
+      roleType: "Full time student",
+    },
   },
   {
     title: "Economics, Business Studies, Physics, Chemistry and Maths",
-    organisation: "Colchester Sixth College",
-    location: "Colchester",
-    dateRange: "2006 - 2008",
-    roleType: "Full time student",
+    details: {
+      organisation: "Colchester Sixth College",
+      location: "Colchester",
+      dateRange: "2006 - 2008",
+      roleType: "Full time student",
+    },
   },
 ];

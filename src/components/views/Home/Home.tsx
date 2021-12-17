@@ -7,9 +7,9 @@ export const Home = () => (
   <>
     <Section>
       <h2>Experience</h2>
-      {experiences.map(({ details, technologies, description }) => (
+      {experiences.map(({ title, details, technologies, description }) => (
         <Card className={styles.card} key={details.dateRange}>
-          <Details details={details} />
+          <Details title={title} details={details} />
           {technologies && <Technologies technologies={technologies} />}
           {description.length > 0 && <p>{description.join("")}</p>}
         </Card>
@@ -19,7 +19,7 @@ export const Home = () => (
       <h2>Projects</h2>
       {projects.map(({ title, technologies, description }) => (
         <Card className={styles.card} key={title}>
-          <h3 className={styles.title}>{title}</h3>
+          <Details title={title} />
           {technologies && <Technologies technologies={technologies} />}
           {description.length > 0 && <p>{description.join("")}</p>}
         </Card>
@@ -27,9 +27,9 @@ export const Home = () => (
     </Section>
     <Section>
       <h2>Education</h2>
-      <Card className={styles.card}>
-        {education.map((edu) => (
-          <Details details={edu} key={edu.dateRange} />
+      <Card className={`${styles.card} ${styles.education}`}>
+        {education.map(({ title, details }) => (
+          <Details title={title} details={details} key={title} />
         ))}
       </Card>
     </Section>
