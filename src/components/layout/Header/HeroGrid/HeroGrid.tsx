@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
-import { Button } from "@input";
+import { Button, ButtonSize } from "@input";
 import { URL_LINKEDIN, URL_INSTAGRAM, URL_GITHUB } from "@constants";
 import styles from "./HeroGrid.module.scss";
 
@@ -32,7 +32,7 @@ export const HeroGrid: FC = () => (
       <h2 className={styles.text}>Full stack developer</h2>
       <div className={styles.buttonWrapper}>
         <Button
-          size="large"
+          size={ButtonSize.Large}
           href={URL_LINKEDIN}
           external
           style={{ position: "relative" }}
@@ -45,7 +45,7 @@ export const HeroGrid: FC = () => (
           }
         />
         <Button
-          size="large"
+          size={ButtonSize.Large}
           href={URL_INSTAGRAM}
           external
           style={{ position: "relative" }}
@@ -58,7 +58,7 @@ export const HeroGrid: FC = () => (
           }
         />
         <Button
-          size="large"
+          size={ButtonSize.Large}
           href={URL_GITHUB}
           external
           style={{ position: "relative" }}

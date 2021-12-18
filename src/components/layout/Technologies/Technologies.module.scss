@@ -36,8 +36,10 @@
 
 .list {
   // Calculated width of .icons
-  // (icon width + 2 * half padding of margin either side) * number of icons
-  max-width: calc((var(--icon-size) + var(--padding)) * var(--count));
+  // (icon width + 2 * half padding of margin either side) * number of icons + 2 * padding
+  max-width: calc(
+    (var(--icon-size) + var(--padding)) * var(--count) + var(--padding-double)
+  );
   margin: unset;
   padding: var(--padding);
   display: grid;
@@ -46,22 +48,17 @@
   text-align: left;
 }
 
-// https://stackoverflow.com/a/17347691
 .listItem {
-  display: inline-block;
   width: 100%;
-}
-
-.listItemContent {
-  display: inline-flex;
+  display: flex;
   justify-content: left;
   align-items: center;
   list-style-type: none;
 }
 
-.listItemContent > span {
+.listItem > span {
   margin-left: var(--padding);
-  white-space: initial;
+  white-space: break-spaces;
 }
 
 .expandCollapse {

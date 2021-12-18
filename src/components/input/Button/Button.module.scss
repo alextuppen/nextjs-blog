@@ -1,6 +1,5 @@
 @import "src/styles/globals";
 
-.linkButton,
 .button {
   display: block;
   white-space: nowrap;
@@ -12,10 +11,12 @@
   user-select: none;
 }
 
-.linkButton:hover,
-.button:hover,
-.linkButton:active,
 .button:active {
+  transform: translateY(0.2rem);
+}
+
+.linkButton:hover,
+.linkButton:active {
   text-decoration: underline;
   text-decoration-color: $primary;
   text-decoration-style: double;
@@ -29,6 +30,49 @@
 .largeIcon {
   width: 3rem;
   height: 3rem;
+}
+
+.primary,
+.secondary {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+  padding: var(--padding-half) var(--padding);
+  box-shadow: 0px 8px 15px $base-colour;
+  border-radius: var(--border-radius);
+}
+
+.primary {
+  background-color: $primary;
+  transition: background-color 0.25s ease-in-out;
+  color: $base-colour;
+}
+
+.primary:hover {
+  background-color: $primary-dark;
+}
+
+.primary:active {
+  background-color: $primary-light;
+}
+
+.secondary {
+  border: var(--border-width) solid $primary;
+  transition: border 0.25s;
+  background-color: $primary-dark;
+}
+
+.seconday:hover {
+  border-color: $primary-dark;
+}
+
+.seconday:active {
+  border-color: $primary-light;
 }
 
 @include bp-small {

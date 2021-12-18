@@ -1,11 +1,12 @@
 import { FC } from "react";
 import Link from "next/link";
 import { Button as RButton } from "reakit/Button";
-import { ButtonProps } from "./Button.types";
+import { ButtonSize, ButtonVariants, ButtonProps } from "./Button.types";
 import styles from "./Button.module.scss";
 
 export const Button: FC<ButtonProps> = ({
-  size = "default",
+  size = ButtonSize.Default,
+  variant = ButtonVariants.Unstyled,
   onClick,
   href,
   icon,
@@ -14,24 +15,45 @@ export const Button: FC<ButtonProps> = ({
   className,
   children,
 }) => {
-  let classes = "";
-
-  if (className) {
-    classes = `${classes} ${className}`;
-  }
+  let classes = `${styles.button}`;
 
   if (href) {
     classes = `${classes} ${styles.linkButton}`;
-  } else {
-    classes = `${classes} ${styles.button}`;
   }
 
   if (icon) {
-    if (size === "default") {
-      classes = `${classes} ${styles.icon}`;
-    } else {
-      classes = `${classes} ${styles.largeIcon}`;
+    switch (size) {
+      case ButtonSize.Default:
+        classes = `${classes} ${styles.icon}`;
+        break;
+      case ButtonSize.Large:
+        classes = `${classes} ${styles.largeIcon}`;
+        break;
+      default:
+        throw new Error(`ButtonSize enum has illegal value ${size}`);
     }
+  }
+
+  console.log(ButtonVariants);
+  console.log(variant);
+  switch (variant) {
+    case ButtonVariants.Primary:
+      classes = `${classes}  ${styles.primary}`;
+      break;
+    case ButtonVariants.Secondary:
+      console.log("ping");
+      classes = `${classes}  ${styles.secondary}`;
+      break;
+    case ButtonVariants.Text:
+      break;
+    case ButtonVariants.Unstyled:
+      break;
+    default:
+      throw new Error(`ButtonVariants enum has illegal value ${variant}`);
+  }
+
+  if (className) {
+    classes = `${classes} ${className}`;
   }
 
   if (href) {

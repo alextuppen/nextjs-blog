@@ -69,17 +69,15 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
           >
             {lookedUpTechs.map((tech) => (
               <li className={styles.listItem} key={tech.title}>
-                <div className={styles.listItemContent}>
-                  <div className={styles.iconWrapper}>
-                    <Image
-                      src={tech.src}
-                      alt={tech.alt}
-                      layout="fill"
-                      objectFit="contain"
-                    />
-                  </div>
-                  <span>{tech.title}</span>
+                <div className={styles.iconWrapper}>
+                  <Image
+                    src={tech.src}
+                    alt={tech.alt}
+                    layout="fill"
+                    objectFit="contain"
+                  />
                 </div>
+                <span>{tech.title}</span>
               </li>
             ))}
           </ul>

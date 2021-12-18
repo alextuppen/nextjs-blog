@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import { DateTime } from "luxon";
-import { Button } from "@input";
+import { uniq } from "lodash";
+import { ButtonVariants, Button } from "@input";
 import { Card, Section } from "@layout";
 import { RecipesProps } from "./Recipes.types";
 
@@ -36,13 +37,13 @@ export const Recipes: FC<RecipesProps> = ({
       Object.entries(keywordsByRecipe).map(([recipeId, keywords]) => {
         if (newSelectedKeywords.every((kws) => keywords.includes(kws))) {
           newVisisbleRecipes.push(recipeId);
-          //   newVisibleKeywords.push(...keywords);
+          newVisibleKeywords.push(...keywords);
         }
       });
 
       setVisibleRecipes(newVisisbleRecipes);
       setSelectedKeywords(newSelectedKeywords);
-      setVisibleKeywords(newVisibleKeywords);
+      setVisibleKeywords(uniq(newVisibleKeywords));
     }
   };
 
@@ -56,14 +57,22 @@ export const Recipes: FC<RecipesProps> = ({
   //   console.log(selectedKeywords);
   //   console.log(visibleKeywords);
   //   console.log(recipes);
-  console.log(keywordsByRecipe);
+  // console.log(keywordsByRecipe);
 
   return (
     <Section>
       <h1>Recipes</h1>
       <Card>
         {visibleKeywords.map((keyword) => (
-          <Button onClick={() => handleKeywordClick(keyword)} key={keyword}>
+          <Button
+            variant={
+              selectedKeywords.includes(keyword)
+                ? ButtonVariants.Primary
+                : ButtonVariants.Secondary
+            }
+            onClick={() => handleKeywordClick(keyword)}
+            key={keyword}
+          >
             {keyword}
           </Button>
         ))}
