@@ -1,4 +1,5 @@
-import { CSSProperties, MouseEventHandler, ReactNode } from "react";
+import { MouseEventHandler, ReactNode } from "react";
+import { ComponentCommon } from "@types";
 
 export enum ButtonSize {
   Default,
@@ -12,13 +13,11 @@ export enum ButtonVariants {
   Unstyled,
 }
 
-export interface ButtonProps {
+export interface ButtonProps extends ComponentCommon {
   size?: ButtonSize;
   variant?: ButtonVariants;
   onClick?: MouseEventHandler;
   href?: string;
   external?: boolean;
   icon?: ReactNode;
-  style?: CSSProperties;
-  className?: string;
 }

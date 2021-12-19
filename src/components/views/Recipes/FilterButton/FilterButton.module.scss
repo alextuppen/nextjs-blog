@@ -1,0 +1,13 @@
+.filterButton {
+  display: block;
+  opacity: 100%;
+  transition: opacity 500ms;
+
+  &.opaque {
+    opacity: 0%;
+  }
+
+  &.hidden {
+    // display: none;
+  }
+}

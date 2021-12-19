@@ -30,7 +30,7 @@ export interface RecipeSynopsis {
   name: string;
   datePublished: string;
   description: string;
-  keywords: string;
+  keywords: string[];
 }
 
 export interface IRecipe extends RecipeSynopsis {

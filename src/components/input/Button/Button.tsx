@@ -11,9 +11,9 @@ export const Button: FC<ButtonProps> = ({
   href,
   icon,
   external,
-  style,
   className,
   children,
+  ...props
 }) => {
   let classes = `${styles.button}`;
 
@@ -34,14 +34,11 @@ export const Button: FC<ButtonProps> = ({
     }
   }
 
-  console.log(ButtonVariants);
-  console.log(variant);
   switch (variant) {
     case ButtonVariants.Primary:
       classes = `${classes}  ${styles.primary}`;
       break;
     case ButtonVariants.Secondary:
-      console.log("ping");
       classes = `${classes}  ${styles.secondary}`;
       break;
     case ButtonVariants.Text:
@@ -63,26 +60,24 @@ export const Button: FC<ButtonProps> = ({
           className={classes}
           href={href}
           target="_blank"
-          style={style}
           rel="noreferrer"
+          {...props}
         >
           {icon || children}
         </a>
       );
     }
     return (
-      <Link href={href}>
+      <Link href={href} {...props}>
         {/* href passed to anchor tag automatically by Link */}
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a className={classes} style={style}>
-          {icon || children}
-        </a>
+        <a className={classes}>{icon || children}</a>
       </Link>
     );
   }
 
   return (
-    <RButton className={classes} onClick={onClick} style={style}>
+    <RButton className={classes} onClick={onClick} {...props}>
       {icon || children}
     </RButton>
   );

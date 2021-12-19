@@ -40,14 +40,16 @@
   font-size: 1.25rem;
   font-weight: 600;
   display: inline-flex;
+  gap: var(--padding-half);
   justify-content: center;
-  align-content: center;
-  padding: var(--padding-half) var(--padding);
+  align-items: center;
   box-shadow: 0px 8px 15px $base-colour;
   border-radius: var(--border-radius);
 }
 
 .primary {
+  padding: calc(var(--padding-half) + var(--border-width))
+    calc(var(--padding) + var(--border-width));
   background-color: $primary;
   transition: background-color 0.25s ease-in-out;
   color: $base-colour;
@@ -62,16 +64,19 @@
 }
 
 .secondary {
+  padding: var(--padding-half) var(--padding);
+  background-color: $base-colour;
   border: var(--border-width) solid $primary;
   transition: border 0.25s;
-  background-color: $primary-dark;
 }
 
-.seconday:hover {
+.secondary:hover {
+  background-color: rgba($color: $primary, $alpha: 0.1);
   border-color: $primary-dark;
 }
 
-.seconday:active {
+.secondary:active {
+  background-color: rgba($color: $primary, $alpha: 0.2);
   border-color: $primary-light;
 }
 
