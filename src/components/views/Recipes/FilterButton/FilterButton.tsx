@@ -9,6 +9,7 @@ export const FilterButton: FC<FilterButtonProps> = ({
   keyword,
   handleKeywordClick,
 }) => {
+  const [opaque, setOpaque] = useState(false);
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
@@ -17,6 +18,7 @@ export const FilterButton: FC<FilterButtonProps> = ({
     element?.addEventListener("transitionend", () => {
       if (element?.style.opacity === "0") {
         setHidden(true);
+        setOpaque(true);
       }
     });
   }, [keyword]);
@@ -42,8 +44,15 @@ export const FilterButton: FC<FilterButtonProps> = ({
       key={keyword}
       style={{
         display: hidden ? "none" : "block",
-        transition: "opacity 500ms",
+        // transition: "opacity 500ms",
         opacity: visibleKeywords.includes(keyword) ? 100 : 0,
+        transition: "max-width 500ms, opacity 500ms",
+        // transform: `scaleX(${visibleKeywords.includes(keyword) ? 1 : 0})`,
+        // transition: "flex-grow 500ms",
+        // flexGrow: visibleKeywords.includes(keyword) ? 1 : 0,
+        // maxWidth: visibleKeywords.includes(keyword) ? 200 : 0,
+        maxWidth: opaque ? 0 : 200,
+        // padding: visibleKeywords.includes(keyword) ? 5 : 0,
       }}
     >
       {keyword}
