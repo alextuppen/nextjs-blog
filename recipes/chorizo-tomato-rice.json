@@ -1,0 +1,111 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Chorizo and tomato rice",
+  "image": [""],
+  "author": {
+    "@type": "Person",
+    "name": "Alex Tuppen"
+  },
+  "datePublished": "2021-02-27",
+  "description": "A rich, flavourful and simple dish cooked entirely in a rice cooker.",
+  "prepTime": "PT15M",
+  "cookTime": "PT20M",
+  "totalTime": "PT35M",
+  "keywords": "weeknight, spicy, chorizo, tomato, sweet corn, rice",
+  "recipeYield": 2,
+  "recipeCategory": "Weeknight meal",
+  "recipeCuisine": "Spanish",
+  "recipeIngredient": [
+    "1 cup basmati rice",
+    "1 medium red onion",
+    "3 cloves garlic",
+    "1tbsp tomato puree",
+    "1tsp chilli pasta",
+    "1 large tin sweet corn",
+    "30g fresh coriander",
+    "4tbsp vegetable oil",
+    "1 chicken stock pot/cube",
+    "freshly ground black pepper",
+    "salt to season",
+    "2tbsp lime juice",
+    "Cheddar cheese for grating"
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Chefs knife"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Chopping board"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Rice cooker with saute function"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Cup"
+    }
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Chop chorizo and onion",
+      "text": "Chop chorizo into 1cm cubes and finely dice the onion."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Saute",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Turn on your rice cooker set to the saute function, once hot add the chorizo and onion."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "If your rice cooker does not have saute functionality use a frying pan and transfer to the rice cooker later."
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Chop and saute garlic",
+      "text": "Finely mince the garlic, when the onion is a few minutes from being softened add the garlic, tomato puree and chilli paste."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Chop tomatoes",
+      "text": "While the garlic cooks chop the tomatoes into quarters."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Toast rice",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Once the garlic has softened and the tomato puree has had its metalic taste cooked off add the rice and stir to coat in the cooking fat."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Washing rice is a highly contentious subject, in this recipe the rice is deliberately not washed, the starch is left on to toast, giving the dish a deeper flavour and helping to thicken the final dish. If your rice is not clean then you should wash it prior to cooking with it."
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add liquid, tomato and cook",
+      "text": "After a few minutes add a cup and a half of water, the tin of sweet corn (including the water, its basically sweetcorn stock), the stock cube, salt, pepper and stir. Place the chopped tomato pieces on top and set the rice cooker to rice cooking mode."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Stir, add lime and season",
+      "text": "Once the rice cooking function has finished break up the tomato pieces add the lime juice, stir to combine and season to taste."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Plate, grate cheddar cheese over to taste and serve."
+    }
+  ]
+}
