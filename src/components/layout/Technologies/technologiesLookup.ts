@@ -6,6 +6,16 @@ export const technologiesLookup: TechnologiesLookup = {
     title: "Apollo GraphQL",
     alt: "Apollo GraphQL logo",
   },
+  urql: {
+    src: "/icons/frameworks/urql.svg",
+    title: "Universal React Query Library (URQL)",
+    alt: "URQL logo",
+  },
+  codegen: {
+    src: "/icons/frameworks/codegen.svg",
+    title: "GraphQL code generator",
+    alt: "GraphQL code generator logo",
+  },
   dotNet: {
     src: "/icons/frameworks/dot-net.svg",
     title: ".Net",
