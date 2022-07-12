@@ -1,0 +1,92 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Pea and chorizo orzo",
+  "image": [""],
+  "author": {
+    "@type": "Person",
+    "name": "Alex Tuppen"
+  },
+  "datePublished": "2022-07-12",
+  "description": "A quick and easy, creamy mid week pasta meal",
+  "prepTime": "PT10M",
+  "cookTime": "PT15M",
+  "totalTime": "PT25M",
+  "keywords": "quick, easy, midweek, weeknight, pea, chorizo, pasta",
+  "recipeYield": 2,
+  "recipeCategory": "Weeknight meal",
+  "recipeIngredient": [
+    "3 cups frozen peas",
+    "1 cups orzo pasta",
+    "1.5 cups orzo pasta",
+    "1 medium white onion",
+    "1 chorizo",
+    "270ml single cream",
+    "30g fresh flat leaf parsley (optional)",
+    "4tbsp vegetable oil",
+    "1 chicken stock pot/cube",
+    "2 tsp balsamic vinegar",
+    "freshly ground black pepper",
+    "salt to season",
+    "parmessan to finish"
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Chefs knife"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Chopping board"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Cup"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Medium saucepan"
+    }
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Chop ingredients",
+      "text": "Finely dice the onion and chorizo, finely chop the parsley if using."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Saute",
+      "text": "Set the saucepan on a medium heat and add the oil; once the oil is hot add the onion and chorizo."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Cook pasta",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Once the onion is soft, the chorizo is cooked and enough of the chorizo oil has rendered out to colour the mixture dark red add the cream, chicken stock, orzo and water and stir to combine."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "The pasta is being cooked in as little water as possible so make sure to stir frequently to prevent it sticking to the bottom of the pan."
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Timer",
+      "text": "While the pasta comes up to the boil set a timer for 2 minutes, grind in the black pepper and add the balsamic vinegar then stir to combine."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Peas",
+      "text": "When the timer goes off add the peas, once back to the boil set a timer for 2 minutes."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Serve.",
+      "text": "When the second timer goes off stir through the chopped parsley, season to taste, plate, grate over parmessan and serve."
+    }
+  ]
+}
