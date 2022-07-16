@@ -6,7 +6,7 @@ export interface TimesProps {
   totalTime: string;
 }
 
-export interface YeildPublishedProps {
+export interface YieldPublishedProps {
   recipeYield: number;
   datePublished: string;
 }

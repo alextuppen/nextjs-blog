@@ -7,7 +7,7 @@ import { GiKnifeFork } from "react-icons/gi";
 import { useMediumMediaQuery } from "hooks";
 import { Card, Section } from "@layout";
 import { Time, TimeType } from "./Time";
-import { TimesProps, YeildPublishedProps, RecipeProps } from "./Recipe.types";
+import { TimesProps, YieldPublishedProps, RecipeProps } from "./Recipe.types";
 import styles from "./Recipe.module.scss";
 
 const Times: FC<TimesProps> = ({ prepTime, cookTime, totalTime }) => (
@@ -24,7 +24,7 @@ const Times: FC<TimesProps> = ({ prepTime, cookTime, totalTime }) => (
   </>
 );
 
-const YeildPublished: FC<YeildPublishedProps> = ({
+const YieldPublished: FC<YieldPublishedProps> = ({
   recipeYield,
   datePublished,
 }) => (
@@ -81,7 +81,7 @@ export const Recipe: FC<RecipeProps> = ({
                   cookTime={cookTime}
                   totalTime={totalTime}
                 />
-                <YeildPublished
+                <YieldPublished
                   recipeYield={recipeYield}
                   datePublished={datePublished}
                 />
@@ -96,7 +96,7 @@ export const Recipe: FC<RecipeProps> = ({
                   />
                 </ul>
                 <ul className={styles.descriptionItemsList}>
-                  <YeildPublished
+                  <YieldPublished
                     recipeYield={recipeYield}
                     datePublished={datePublished}
                   />
