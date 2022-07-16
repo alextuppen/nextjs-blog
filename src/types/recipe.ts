@@ -21,10 +21,6 @@ interface InstructionStepWithTip extends InstructionStepCommon {
   itemListElement: Array<HowToDirection | HowToTip>;
 }
 
-export interface KeywordsByRecipe {
-  [key: string]: string[];
-}
-
 export interface RecipeSynopsis {
   id: string;
   name: string;

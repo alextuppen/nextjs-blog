@@ -4,29 +4,6 @@
   @include elev-1();
 }
 
-.filterButton {
-  opacity: 100%;
-  transition: opacity 500ms;
-
-  &.opaque {
-    opacity: 0%;
-  }
-}
-
-// .filterButton {
-//   transition-duration: 0, 200ms;
-//   transition-property: display, opacity;
-//   transition-delay: 0;
-
-//   &.hidden {
-//     display: none;
-//     opacity: 0;
-//     transition-duration: 200ms, 0;
-//     transition-property: opacity, display;
-//     transition-delay: 0, 200ms;
-//   }
-// }
-
 .keywords {
   display: flex;
   gap: var(--padding-half);

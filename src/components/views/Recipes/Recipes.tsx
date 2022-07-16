@@ -3,36 +3,33 @@ import { uniq } from "lodash";
 import { GrPowerReset } from "react-icons/gr";
 import { ButtonVariants, Button } from "@input";
 import { Card, Section } from "@layout";
-import { FilterButton } from "./FilterButton/FilterButton";
+import { motion, AnimatePresence } from "framer-motion";
+import { RecipeSynopsis } from "@types";
 import { RecipesProps } from "./Recipes.types";
 import styles from "./Recipes.module.scss";
 
-export const Recipes: FC<RecipesProps> = ({
-  recipes,
-  recipeIds,
-  allKeywords,
-  keywordsByRecipe,
-}) => {
-  const [visibleRecipes, setVisibleRecipes] = useState<string[]>([]);
+export const Recipes: FC<RecipesProps> = ({ recipes, allKeywords }) => {
+  const [visibleRecipes, setVisibleRecipes] = useState<RecipeSynopsis[]>([]);
   const [selectedKeywords, setSelectedKeywords] = useState<string[]>([]);
   const [visibleKeywords, setVisibleKeywords] = useState<string[]>([]);
 
   useEffect(() => {
-    setVisibleRecipes(recipeIds);
-  }, [recipeIds]);
+    setVisibleRecipes(recipes);
+  }, [recipes]);
 
   useEffect(() => {
     setVisibleKeywords(allKeywords);
   }, [allKeywords]);
 
   const updateVisibleRecipesAndKeywords = (newSelectedKeywords: string[]) => {
-    const newVisisbleRecipes: string[] = [];
+    const newVisisbleRecipes: RecipeSynopsis[] = [];
     const newVisibleKeywords: string[] = [];
 
-    // eslint-disable-next-line array-callback-return
-    Object.entries(keywordsByRecipe).map(([recipeId, keywords]) => {
+    recipes.forEach((recipe) => {
+      const { keywords } = recipe;
+
       if (newSelectedKeywords.every((kws) => keywords.includes(kws))) {
-        newVisisbleRecipes.push(recipeId);
+        newVisisbleRecipes.push(recipe);
         newVisibleKeywords.push(...keywords);
       }
     });
@@ -60,16 +57,10 @@ export const Recipes: FC<RecipesProps> = ({
   };
 
   const handleResetClick = () => {
-    setVisibleRecipes(recipeIds);
+    setVisibleRecipes(recipes);
     setSelectedKeywords([]);
     setVisibleKeywords(allKeywords);
   };
-
-  //   console.log(visibleRecipes);
-  //   console.log(selectedKeywords);
-  // console.log(visibleKeywords);
-  // console.log(recipes);
-  // console.log(keywordsByRecipe);
 
   return (
     <Section>
@@ -77,53 +68,59 @@ export const Recipes: FC<RecipesProps> = ({
       <Card className={styles.card}>
         <h2>Keyword filter</h2>
         <div className={styles.keywords}>
-          {allKeywords.map((keyword) => (
-            <FilterButton
-              selectedKeywords={selectedKeywords}
-              visibleKeywords={visibleKeywords}
-              keyword={keyword}
-              handleKeywordClick={handleKeywordClick}
-              key={keyword}
-            />
-            // <Button
-            //   id={`filter-button-${keyword}`}
-            //   variant={
-            //     selectedKeywords.includes(keyword)
-            //       ? ButtonVariants.Primary
-            //       : ButtonVariants.Secondary
-            //   }
-            //   className={`${styles.filterButton} ${
-            //     visibleKeywords.includes(keyword) ? null : styles.opaque
-            //   }`}
-            //   onClick={() => handleKeywordClick(keyword)}
-            //   key={keyword}
-            // >
-            //   {keyword}
-            // </Button>
-          ))}
+          <AnimatePresence>
+            {visibleKeywords.map((keyword) => (
+              <motion.div
+                key={keyword}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                layout
+              >
+                <Button
+                  onClick={() => handleKeywordClick(keyword)}
+                  variant={
+                    selectedKeywords.includes(keyword)
+                      ? ButtonVariants.Primary
+                      : ButtonVariants.Secondary
+                  }
+                >
+                  {keyword}
+                </Button>
+              </motion.div>
+            ))}
+          </AnimatePresence>
         </div>
         <Button variant={ButtonVariants.Primary} onClick={handleResetClick}>
           <GrPowerReset />
           Reset
         </Button>
       </Card>
-      {visibleRecipes?.map((id) => {
-        const recipe = recipes.find((rec) => rec.id === id);
-        if (!recipe) return null;
+      <AnimatePresence>
+        {visibleRecipes.map((recipe) => {
+          const { id, name, description, keywords } = recipe;
 
-        const { name, description, keywords } = recipe;
-        return (
-          <Card className={styles.card} key={id}>
-            <h2>{name}</h2>
-            <span>{description}</span>
-            <div className={styles.keywords}>
-              {keywords.map((keyword) => (
-                <span key={keyword}>{keyword}</span>
-              ))}
-            </div>
-          </Card>
-        );
-      })}
+          return (
+            <motion.div
+              key={id}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              layout
+            >
+              <Card className={styles.card} key={id}>
+                <h2>{name}</h2>
+                <span>{description}</span>
+                <div className={styles.keywords}>
+                  {keywords.map((keyword) => (
+                    <span key={keyword}>{keyword}</span>
+                  ))}
+                </div>
+              </Card>
+            </motion.div>
+          );
+        })}
+      </AnimatePresence>
     </Section>
   );
 };
