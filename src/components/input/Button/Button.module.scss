@@ -14,8 +14,8 @@
   transform: translateY(0.2rem);
 }
 
-.linkButton:hover,
-.linkButton:active {
+.textButton:hover,
+.textButton:active {
   text-decoration: underline;
   text-decoration-color: $primary;
   text-decoration-style: double;

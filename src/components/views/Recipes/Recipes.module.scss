@@ -18,6 +18,13 @@
   height: 100%;
 }
 
+.recipeCard:hover > .recipeName,
+.recipeCard:active > .recipeName {
+  text-decoration: underline;
+  text-decoration-color: $primary;
+  text-decoration-style: double;
+}
+
 .recipeImageWrapper {
   position: relative;
   width: 100%;

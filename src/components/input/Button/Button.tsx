@@ -17,10 +17,6 @@ export const Button: FC<ButtonProps> = ({
 }) => {
   let classes = `${styles.button}`;
 
-  if (href) {
-    classes = `${classes} ${styles.linkButton}`;
-  }
-
   if (icon) {
     switch (size) {
       case ButtonSize.Default:
@@ -42,6 +38,7 @@ export const Button: FC<ButtonProps> = ({
       classes = `${classes}  ${styles.secondary}`;
       break;
     case ButtonVariants.Text:
+      classes = `${classes}  ${styles.textButton}`;
       break;
     case ButtonVariants.Unstyled:
       break;

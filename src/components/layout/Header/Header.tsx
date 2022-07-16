@@ -14,7 +14,7 @@ import {
   ToolbarSeparator,
 } from "reakit/Toolbar";
 import { URL_LINKEDIN, URL_INSTAGRAM, URL_GITHUB } from "@constants";
-import { Button } from "@input";
+import { Button, ButtonVariants } from "@input";
 import { HeroGrid } from "./HeroGrid/HeroGrid";
 import { MenuBurger } from "./MenuBurger/MenuBurger";
 import styles from "./Header.module.scss";
@@ -83,6 +83,7 @@ export const Header = () => {
             {...toolbar}
             className={styles.homeLink}
             as={Button}
+            variant={ButtonVariants.Text}
             href="/"
           >
             <div className={styles.logo}>
@@ -98,7 +99,13 @@ export const Header = () => {
           <div className={styles.links}>
             <div className={styles.toolbarInternal}>
               {internalLinks.map(({ link, text }) => (
-                <ToolbarItem {...toolbar} as={Button} href={link} key={link}>
+                <ToolbarItem
+                  {...toolbar}
+                  as={Button}
+                  variant={ButtonVariants.Text}
+                  href={link}
+                  key={link}
+                >
                   <span>{text}</span>
                 </ToolbarItem>
               ))}
@@ -112,6 +119,7 @@ export const Header = () => {
                 <ToolbarItem
                   {...toolbar}
                   as={Button}
+                  variant={ButtonVariants.Text}
                   href={link}
                   external
                   key={link}
