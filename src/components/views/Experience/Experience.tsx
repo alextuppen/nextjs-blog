@@ -1,9 +1,9 @@
 import { Card, Section, Technologies } from "@layout";
 import { experiences, education, projects } from "./static-content";
 import { Details } from "./Details/Details";
-import styles from "./Home.module.scss";
+import styles from "./Experience.module.scss";
 
-export const Home = () => (
+export const Experience = () => (
   <>
     <Section>
       <h2>Experience</h2>

@@ -1,4 +1,6 @@
 import fs from "fs";
+import { uniq } from "lodash";
+import { GetStaticProps } from "next";
 import path from "path";
 
 const recipesDirectory = path.join(process.cwd(), "recipes");
@@ -42,6 +44,22 @@ export const getSortedRecipesSynopsis = () => {
 export const getRecipeData = (id: string | string[] | undefined) => {
   const fullPath = path.join(recipesDirectory, `${id}.json`);
   return getFileContentsWithSplitKeywords(fullPath);
+};
+
+export const getRecipesStaticProps: GetStaticProps = async () => {
+  const recipes = getSortedRecipesSynopsis();
+
+  const allKeywords = recipes.reduce(
+    (accumulator, { keywords }) => uniq(accumulator.concat(keywords)),
+    []
+  );
+
+  return {
+    props: {
+      recipes,
+      allKeywords,
+    },
+  };
 };
 
 export const getAllRecipeIds = () => {

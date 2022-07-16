@@ -43,3 +43,8 @@ export interface IRecipe extends RecipeSynopsis {
   tool: { "@type": "HowToTool"; name: string }[];
   recipeInstructions: Array<InstructionStep | InstructionStepWithTip>;
 }
+
+export interface RecipePageProps {
+  recipes: RecipeSynopsis[];
+  allKeywords: string[];
+}

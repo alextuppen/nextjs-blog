@@ -21,8 +21,8 @@ import styles from "./Header.module.scss";
 
 const internalLinks = [
   {
-    link: "/recipes",
-    text: "Recipes",
+    link: "/experience",
+    text: "Experience",
   },
 ];
 
