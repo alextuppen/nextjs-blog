@@ -2,7 +2,6 @@
 
 .button {
   display: block;
-  white-space: nowrap;
   color: $text;
   background: none;
   border: none;
@@ -34,6 +33,7 @@
 
 .primary,
 .secondary {
+  white-space: nowrap;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.1rem;

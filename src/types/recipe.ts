@@ -23,6 +23,7 @@ interface InstructionStepWithTip extends InstructionStepCommon {
 
 export interface RecipeSynopsis {
   id: string;
+  image: string[];
   name: string;
   datePublished: string;
   description: string;
@@ -32,7 +33,6 @@ export interface RecipeSynopsis {
 export interface IRecipe extends RecipeSynopsis {
   "@context": "https://schema.org/";
   "@type": "Recipe";
-  image: string[];
   author: { "@type": "Person"; name: string };
   prepTime: string;
   cookTime: string;

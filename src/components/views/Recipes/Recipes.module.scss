@@ -1,7 +1,31 @@
 @import "src/styles/globals";
 
-.card {
+.card,
+.recipeCard {
   @include elev-1();
+}
+
+.recipeGrid {
+  width: 100%;
+  display: grid;
+  gap: var(--padding);
+  grid-template-columns: 1fr;
+}
+
+.recipeWrapper,
+.recipeCard {
+  width: 100%;
+  height: 100%;
+}
+
+.recipeImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 15rem;
+}
+
+.recipeImageWrapper > div > img {
+  border-radius: var(--border-radius-double);
 }
 
 .keywords {
@@ -9,4 +33,34 @@
   gap: var(--padding-half);
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.keyword {
+  @include elev-5();
+  padding: var(--padding-half);
+  border-radius: var(--border-radius);
+}
+
+@include bp-small {
+  .recipeImageWrapper {
+    height: 18rem;
+  }
+}
+
+@include bp-medium {
+  .recipeImageWrapper {
+    height: 24rem;
+  }
+}
+
+@include bp-large {
+  .recipeGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include bp-xl {
+  .recipeGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }

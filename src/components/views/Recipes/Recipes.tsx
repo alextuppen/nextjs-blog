@@ -5,6 +5,7 @@ import { ButtonVariants, Button } from "@input";
 import { Card, Section } from "@layout";
 import { motion, AnimatePresence } from "framer-motion";
 import { RecipeSynopsis } from "@types";
+import Image from "next/image";
 import { RecipesProps } from "./Recipes.types";
 import styles from "./Recipes.module.scss";
 
@@ -96,31 +97,52 @@ export const Recipes: FC<RecipesProps> = ({ recipes, allKeywords }) => {
           Reset
         </Button>
       </Card>
-      <AnimatePresence>
-        {visibleRecipes.map((recipe) => {
-          const { id, name, description, keywords } = recipe;
+      <div className={styles.recipeGrid}>
+        <AnimatePresence>
+          {visibleRecipes.map((recipe) => {
+            const { id, image, name, description, keywords } = recipe;
 
-          return (
-            <motion.div
-              key={id}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              layout
-            >
-              <Card className={styles.card} key={id}>
-                <h2>{name}</h2>
-                <span>{description}</span>
-                <div className={styles.keywords}>
-                  {keywords.map((keyword) => (
-                    <span key={keyword}>{keyword}</span>
-                  ))}
-                </div>
-              </Card>
-            </motion.div>
-          );
-        })}
-      </AnimatePresence>
+            return (
+              <motion.div
+                key={id}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                layout
+                className={styles.recipeWrapper}
+              >
+                <Button
+                  href={`/recipes/${id}`}
+                  className={styles.recipeWrapper}
+                >
+                  <Card className={styles.recipeCard} key={id}>
+                    <h2>{name}</h2>
+                    {image[0] !== "" && (
+                      <div className={styles.recipeImageWrapper}>
+                        <Image
+                          alt={name}
+                          src={image[0]}
+                          layout="fill"
+                          objectFit="cover"
+                          quality={100}
+                        />
+                      </div>
+                    )}
+                    <span>{description}</span>
+                    <div className={styles.keywords}>
+                      {keywords.map((keyword) => (
+                        <span className={styles.keyword} key={keyword}>
+                          {keyword}
+                        </span>
+                      ))}
+                    </div>
+                  </Card>
+                </Button>
+              </motion.div>
+            );
+          })}
+        </AnimatePresence>
+      </div>
     </Section>
   );
 };

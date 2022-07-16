@@ -8,6 +8,7 @@
 html {
   --border-width: 0.1rem;
   --border-radius: 0.5rem;
+  --border-radius-double: calc(var(--border-radius) * 2);
   --content-max-width: 100%;
   --padding-half: calc(var(--padding) / 2);
   --padding: 1rem;
