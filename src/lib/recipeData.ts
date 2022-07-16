@@ -1,7 +1,7 @@
 import fs from "fs";
-import { uniq } from "lodash";
 import { GetStaticProps } from "next";
 import path from "path";
+import { RecipeSynopsis } from "@types";
 
 const recipesDirectory = path.join(process.cwd(), "recipes");
 
@@ -15,7 +15,7 @@ const getFileContentsWithSplitKeywords = (fullPath: string) => {
   };
 };
 
-export const getSortedRecipesSynopsis = () => {
+export const getSortedRecipesSynopsis = (): RecipeSynopsis[] => {
   const fileNames = fs.readdirSync(recipesDirectory);
 
   const allRecipesData = fileNames.map((fileName) => {
@@ -50,15 +50,24 @@ export const getRecipeData = (id: string | string[] | undefined) => {
 export const getRecipesStaticProps: GetStaticProps = async () => {
   const recipes = getSortedRecipesSynopsis();
 
-  const allKeywords = recipes.reduce(
-    (accumulator, { keywords }) => uniq(accumulator.concat(keywords)),
-    []
+  const countedKeywords = recipes.reduce<{ [key: string]: number }>(
+    (accumulator, { keywords }) => {
+      keywords.forEach((keyword) => {
+        accumulator[keyword] = (accumulator[keyword] || 0) + 1;
+      });
+      return accumulator;
+    },
+    {}
+  );
+
+  const sortedKeywords = Object.keys(countedKeywords).sort(
+    (a, b) => countedKeywords[b] - countedKeywords[a]
   );
 
   return {
     props: {
       recipes,
-      allKeywords,
+      allKeywords: sortedKeywords,
     },
   };
 };
