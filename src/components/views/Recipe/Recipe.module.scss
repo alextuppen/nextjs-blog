@@ -25,6 +25,16 @@
   grid-area: method;
 }
 
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+}
+
+.imageWrapper > div > img {
+  border-radius: var(--border-radius-double);
+}
+
 .descriptionItems,
 .toolsIngredients {
   width: 75%;
@@ -104,6 +114,10 @@
 }
 
 @include bp-small {
+  .imageWrapper {
+    height: 30rem;
+  }
+
   .descriptionItems,
   .toolsIngredients {
     width: 90%;
@@ -116,6 +130,10 @@
 }
 
 @include bp-medium {
+  .imageWrapper {
+    height: 40rem;
+  }
+
   .descriptionItems,
   .toolsIngredients {
     width: 100%;
@@ -133,11 +151,21 @@
 }
 
 @include bp-large {
+  .imageWrapper {
+    height: 45rem;
+  }
+
   .grid {
     grid-template-areas: "description description" "ingredients method" "blank method";
   }
 
   .toolsIngredientsList {
     grid-template-columns: 1fr;
+  }
+}
+
+@include bp-xl {
+  .imageWrapper {
+    height: 50rem;
   }
 }

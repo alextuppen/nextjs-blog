@@ -8,17 +8,17 @@
     "name": "Alex Tuppen"
   },
   "datePublished": "2022-07-12",
-  "description": "A quick and easy, creamy mid week pasta meal",
+  "description": "An evolution from the original pea and chorizo pasta dish, this new version cooks everything in one pan for more flavour, an extra creamy sauce, shorter cooking time and less washing up!",
   "prepTime": "PT10M",
   "cookTime": "PT15M",
   "totalTime": "PT25M",
-  "keywords": "weeknight, pea, chorizo, creamy, pasta",
+  "keywords": "weeknight, pea, chorizo, creamy, orzo, pasta",
   "recipeYield": 2,
   "recipeCategory": "Weeknight meal",
   "recipeIngredient": [
     "3 cups frozen peas",
-    "1 cups orzo pasta",
-    "1.5 cups orzo pasta",
+    "1 cup orzo pasta",
+    "1.5 cup orzo pasta",
     "1 medium white onion",
     "1 chorizo",
     "270ml single cream",
@@ -51,17 +51,17 @@
   "recipeInstructions": [
     {
       "@type": "HowToStep",
-      "name": "Chop ingredients",
+      "name": "Dice onion and chorizo, chop parsley",
       "text": "Finely dice the onion and chorizo, finely chop the parsley if using."
     },
     {
       "@type": "HowToStep",
-      "name": "Saute",
+      "name": "Saute onion and chorizo",
       "text": "Set the saucepan on a medium heat and add the oil; once the oil is hot add the onion and chorizo."
     },
     {
       "@type": "HowToStep",
-      "name": "Cook pasta",
+      "name": "Add cream, chicken stock, orzo and water",
       "itemListElement": [
         {
           "@type": "HowToDirection",
@@ -75,17 +75,17 @@
     },
     {
       "@type": "HowToStep",
-      "name": "Timer",
+      "name": "Add black pepper and balsamic vinegar",
       "text": "While the pasta comes up to the boil set a timer for 2 minutes, grind in the black pepper and add the balsamic vinegar then stir to combine."
     },
     {
       "@type": "HowToStep",
-      "name": "Peas",
+      "name": "Add peas",
       "text": "When the timer goes off add the peas, once back to the boil set a timer for 2 minutes."
     },
     {
       "@type": "HowToStep",
-      "name": "Serve.",
+      "name": "Add parsley, season, grate parmessan and serve",
       "text": "When the second timer goes off stir through the chopped parsley, season to taste, plate, grate over parmessan and serve."
     }
   ]
