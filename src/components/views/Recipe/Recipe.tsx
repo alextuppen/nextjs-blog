@@ -73,15 +73,17 @@ export const Recipe: FC<RecipeProps> = ({
       <h2>{name}</h2>
       <div className={styles.grid}>
         <Card className={styles.descriptionCard}>
-          <div className={styles.imageWrapper}>
-            <Image
-              src={image[0]}
-              alt={name}
-              layout="fill"
-              objectFit="cover"
-              quality={100}
-            />
-          </div>
+          {image[0] !== "" && (
+            <div className={styles.imageWrapper}>
+              <Image
+                src={image[0]}
+                alt={name}
+                layout="fill"
+                objectFit="cover"
+                quality={100}
+              />
+            </div>
+          )}
           <div className={styles.descriptionItems}>
             <p>{description}</p>
             {!isMediumBP ? (
