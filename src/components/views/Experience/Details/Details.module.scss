@@ -26,6 +26,13 @@
   gap: var(--padding-half);
 }
 
+.organisation,
+.location,
+.dateRange,
+.roleType {
+  color: $text-medium-emphasis;
+}
+
 .organisation {
   grid-area: organisation;
 }

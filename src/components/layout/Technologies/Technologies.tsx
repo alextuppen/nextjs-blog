@@ -84,15 +84,15 @@ export const Technologies = ({ technologies }: TechnologiesProps) => {
         </AnimateHeight>
       </div>
       {height === 0 ? (
-        <span className={styles.expandCollapse}>
+        <span className={styles.expandCollapseWrapper}>
           <BsChevronDoubleDown />
-          <span>Expand</span>
+          <span className={styles.expandCollapse}>Expand</span>
           <BsChevronDoubleDown />
         </span>
       ) : (
-        <span className={styles.expandCollapse}>
+        <span className={styles.expandCollapseWrapper}>
           <BsChevronDoubleUp />
-          <span>Collapse</span>
+          <span className={styles.expandCollapse}>Collapse</span>
           <BsChevronDoubleUp />
         </span>
       )}

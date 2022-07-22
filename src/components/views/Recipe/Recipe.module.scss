@@ -5,6 +5,7 @@
   display: grid;
   grid-template-areas: "description" "ingredients" "method";
   gap: var(--padding-double);
+  align-items: start;
 }
 
 .descriptionCard,
@@ -156,7 +157,7 @@
   }
 
   .grid {
-    grid-template-areas: "description description" "ingredients method" "blank method";
+    grid-template-areas: "description description" "ingredients method";
   }
 
   .toolsIngredientsList {

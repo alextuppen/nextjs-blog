@@ -1,7 +1,6 @@
 @import "src/styles/globals";
 
 .root {
-  max-width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,7 +60,12 @@
   white-space: break-spaces;
 }
 
+.expandCollapseWrapper,
 .expandCollapse {
+  color: $text-medium-emphasis;
+}
+
+.expandCollapseWrapper {
   position: relative;
   top: calc(var(--border-width) * -1);
   padding: 0 var(--padding) var(--padding) var(--padding);
@@ -82,7 +86,7 @@
     --icon-size: 1.75rem;
   }
 
-  .expandCollapse {
+  .expandCollapseWrapper {
     width: 9.75rem;
   }
 }
@@ -92,13 +96,13 @@
     --icon-size: 2rem;
   }
 
-  .expandCollapse {
+  .expandCollapseWrapper {
     width: 10.5rem;
   }
 }
 
 @include bp-large {
-  .expandCollapse {
+  .expandCollapseWrapper {
     width: 11rem;
   }
 }
