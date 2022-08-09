@@ -1,0 +1,89 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Roasted chicken, sweet potato and broccoli with a cheese sauce",
+  "author": {
+    "@type": "Person",
+    "name": "Alex Tuppen"
+  },
+  "datePublished": "2022-07-25",
+  "description": "",
+  "prepTime": "PT10M",
+  "cookTime": "PT40M",
+  "totalTime": "PT40M",
+  "keywords": "weeknight, chicken, butternut squash, broccoli, cheese",
+  "recipeYield": 2,
+  "recipeCategory": "Weeknight meal",
+  "recipeIngredient": [
+    "4tbsp vegetable oil",
+    "500g pre-chopped butternut squash",
+    "4 boneless skinned chicken thighs",
+    "200g tenderstem broccoli",
+    "250g cream cheese",
+    "1 medium white onion",
+    "3 cloves garlic",
+    "1 chicken stock pot",
+    "2tsp balsamic vinegar",
+    "freshly grated pepper",
+    "salt to season"
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Chefs knife"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Chopping board"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Large roasting tray"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Medium frying pan"
+    }
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Pre-heat oven to 220C and toss ",
+      "text": "Pre-heat the oven to 220C ."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Saute onion and chorizo",
+      "text": "Set the saucepan on a medium heat and add the oil; once the oil is hot add the onion and chorizo."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add cream, chicken stock, orzo and water",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Once the onion is soft, the chorizo is cooked and enough of the chorizo oil has rendered out to colour the mixture dark red add the cream, chicken stock, orzo and water and stir to combine."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "The pasta is being cooked in as little water as possible so make sure to stir frequently to prevent it sticking to the bottom of the pan."
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add black pepper and balsamic vinegar",
+      "text": "While the pasta comes up to the boil set a timer for 2 minutes, grind in the black pepper and add the balsamic vinegar then stir to combine."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add peas",
+      "text": "When the timer goes off add the peas, once back to the boil set a timer for 2 minutes."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add parsley, season, grate parmessan and serve",
+      "text": "When the second timer goes off stir through the chopped parsley, season to taste, plate, grate over parmessan and serve."
+    }
+  ]
+}
