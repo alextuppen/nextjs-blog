@@ -2,13 +2,13 @@
   "@context": "https://schema.org/",
   "@type": "Recipe",
   "name": "Hummus and chorizo salad",
-  "image": [""],
+  "image": ["/recipes/grain-hummus-chorizo-salad.jpg"],
   "author": {
     "@type": "Person",
     "name": "Alex Tuppen"
   },
   "datePublished": "2021-10-17",
-  "description": "A quick and easy, filling salad.",
+  "description": "An excellent meal to make if you want to practise your knife skills, the most complicated part of this is chopping everything small enough, even the dressing is just hummus.",
   "prepTime": "PT25M",
   "cookTime": "PT5M",
   "totalTime": "PT30M",

@@ -25,7 +25,7 @@ export const getSortedRecipesSynopsis = (): RecipeSynopsis[] => {
 
     return {
       id: fileName.replace(/\.json$/, ""),
-      image,
+      image: image || null,
       name,
       datePublished,
       description,

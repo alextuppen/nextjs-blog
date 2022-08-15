@@ -1,0 +1,93 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Pan fried chicken thigh, rice salad and a satay sauce",
+  "image": ["/recipes/roasted-chicken-satay-salad.jpg"],
+  "author": {
+    "@type": "Person",
+    "name": "Alex Tuppen"
+  },
+  "datePublished": "2022-07-25",
+  "description": "While the chicken thighs cook you make the salad then everything comes together at the end when the pan is deglazed and the satay sauce brings it all together.",
+  "creativeWorkStatus": "draft",
+  "prepTime": "PT10M",
+  "cookTime": "PT40M",
+  "totalTime": "PT40M",
+  "keywords": "weeknight, chicken, carrot, sugarsnap peas, peanut, salad",
+  "recipeYield": 2,
+  "recipeCategory": "Weeknight meal",
+  "recipeIngredient": [
+    "2tbsp vegetable oil",
+    "4 boneless skinned chicken thighs",
+    "200g sugarsnap peas",
+    "1 large carrot",
+    "250g microwave brown rice pouch",
+    "3 cloves garlic",
+    "Thumb sized piece of ginger",
+    "30g fresh coriander",
+    "1 chicken stock pot"
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Chefs knife"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Chopping board"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Large roasting tray"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Medium frying pan"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Medium grater"
+    }
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Pre-heat oven to 220C and toss ",
+      "text": "Pre-heat the oven to 220C ."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Saute onion and chorizo",
+      "text": "Set the saucepan on a medium heat and add the oil; once the oil is hot add the onion and chorizo."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add cream, chicken stock, orzo and water",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Once the onion is soft, the chorizo is cooked and enough of the chorizo oil has rendered out to colour the mixture dark red add the cream, chicken stock, orzo and water and stir to combine."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "The pasta is being cooked in as little water as possible so make sure to stir frequently to prevent it sticking to the bottom of the pan."
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add black pepper and balsamic vinegar",
+      "text": "While the pasta comes up to the boil set a timer for 2 minutes, grind in the black pepper and add the balsamic vinegar then stir to combine."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add peas",
+      "text": "When the timer goes off add the peas, once back to the boil set a timer for 2 minutes."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add parsley, season, grate parmessan and serve",
+      "text": "When the second timer goes off stir through the chopped parsley, season to taste, plate, grate over parmessan and serve."
+    }
+  ]
+}

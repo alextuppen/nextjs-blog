@@ -2,7 +2,6 @@
   "@context": "https://schema.org/",
   "@type": "Recipe",
   "name": "Pea and chorizo pasta",
-  "image": [""],
   "author": {
     "@type": "Person",
     "name": "Alex Tuppen"
@@ -12,7 +11,7 @@
   "prepTime": "PT10M",
   "cookTime": "PT20M",
   "totalTime": "PT30M",
-  "keywords": "weeknight, pea, chorizo, creamy, pasta",
+  "keywords": "weeknight, pea, chorizo, cream, pasta, cheese",
   "recipeYield": 4,
   "recipeCategory": "Weeknight meal",
   "recipeIngredient": [

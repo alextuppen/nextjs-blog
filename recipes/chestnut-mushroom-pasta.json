@@ -2,7 +2,6 @@
   "@context": "https://schema.org/",
   "@type": "Recipe",
   "name": "Chestnut and mushroom pasta",
-  "image": [""],
   "author": {
     "@type": "Person",
     "name": "Alex Tuppen"

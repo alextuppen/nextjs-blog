@@ -1,13 +1,14 @@
 {
   "@context": "https://schema.org/",
   "@type": "Recipe",
-  "name": "Roasted chicken, sweet potato and broccoli with a cheese sauce",
+  "name": "Roasted chicken, butternut squash and broccoli with a cheese sauce",
+  "image": ["/recipes/roasted-chicken-veg-cheese-sauce.jpg"],
   "author": {
     "@type": "Person",
     "name": "Alex Tuppen"
   },
   "datePublished": "2022-07-25",
-  "description": "",
+  "description": "Affectionately known as 'slop' because of its appearance; this recipe is very easy to make (especially if you use pre-chopped butternut squash) and the sauce is far tastier than it has any right to be.",
   "prepTime": "PT10M",
   "cookTime": "PT40M",
   "totalTime": "PT40M",
