@@ -1,36 +1,53 @@
 @import "src/styles/globals";
 
-.root {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.primaryRoot,
+.secondaryRoot {
+  grid-area: details;
+}
+
+.radiusBottomLeft {
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.primaryWrapper,
+.secondaryWrapper {
+  display: grid;
+  grid-template-areas:
+    "organisation location"
+    "dateRange dateRange"
+    "type type";
+  justify-items: center;
   gap: var(--padding);
 }
 
-.title {
-  max-width: 50%;
-}
-
-.details {
-  width: 100%;
-  display: grid;
-  grid-template-areas:
-    "organisation"
-    "location"
-    "time"
-    "type";
-  justify-items: center;
-  align-items: center;
-  gap: var(--padding-half);
+.primaryColour,
+.secondaryColour {
+  color: $text-medium-emphasis;
 }
 
 .organisation,
 .location,
-.dateRange,
+.primaryDateRange,
+.secondaryDateRange,
 .roleType {
-  color: $text-medium-emphasis;
+  height: 100%;
+  width: 100%;
+  gap: var(--padding-half);
+  align-items: center;
+}
+
+.organisation,
+.location,
+.roleType {
+  display: flex;
+}
+
+.organisation {
+  justify-content: flex-end;
+}
+
+.location {
+  justify-content: flex-start;
 }
 
 .organisation {
@@ -41,37 +58,104 @@
   grid-area: location;
 }
 
-.dateRange {
-  grid-area: time;
+.primaryDateRange,
+.secondaryDateRange,
+.roleType {
+  justify-content: center;
+}
+
+.primaryDateRange,
+.secondaryDateRange {
+  grid-area: dateRange;
+  display: flex;
+}
+
+.dateIcon {
+  grid-area: icon;
+}
+
+.primaryStartDate,
+.secondaryStartDate {
+  grid-area: start;
+}
+
+.primaryStartDate::after,
+.secondaryStartDate::after {
+  content: "-";
+  padding-left: var(--padding-half);
+}
+
+.endDate {
+  grid-area: end;
 }
 
 .roleType {
   grid-area: type;
+  justify-content: center;
 }
 
 @include bp-small {
-  .details {
+  .primaryWrapper,
+  .secondaryWrapper {
     grid-template-areas:
-      "organisation time"
-      "location type";
+      "organisation location type"
+      "dateRange dateRange dateRange";
+    justify-items: start;
+  }
+
+  .organisation,
+  .location {
+    justify-content: flex-start;
+  }
+
+  .primaryDateRange,
+  .secondaryDateRange {
+    justify-content: center;
+  }
+
+  .roleType {
+    grid-area: type;
+    justify-content: flex-start;
   }
 }
 
 @include bp-medium {
-  .details {
-    width: 75%;
+  .primaryRoot {
+    @include elev-5();
+    height: 100%;
+    padding: var(--padding-double) var(--padding-double) var(--padding-double)
+      var(--padding-double);
+    border-right: var(--border-width) solid $primary;
+    border-top-left-radius: var(--border-radius);
   }
-}
 
-@include bp-large {
-  .details {
-    grid-template-areas: "organisation time location type";
-    width: 90%;
+  .primaryWrapper {
+    grid-template-areas:
+      "organisation"
+      "location"
+      "type"
+      "dateRange";
   }
-}
 
-@include bp-xl {
-  .details {
-    width: 80%;
+  .secondaryWrapper {
+    grid-template-areas: "organisation location type dateRange";
+  }
+
+  .primaryColour {
+    color: $text;
+  }
+
+  .primaryDateRange {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "icon start"
+      ". end";
+    justify-items: start;
+  }
+
+  .primaryStartDate::after {
+    content: unset;
+    padding-left: unset;
   }
 }

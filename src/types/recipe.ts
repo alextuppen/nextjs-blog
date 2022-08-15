@@ -23,7 +23,7 @@ interface InstructionStepWithTip extends InstructionStepCommon {
 
 export interface RecipeSynopsis {
   id: string;
-  image: string[];
+  image?: string[];
   name: string;
   datePublished: string;
   description: string;

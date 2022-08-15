@@ -1,6 +1,6 @@
-import { TechnologiesLookup } from "./Technologies.types";
+import { TechnologiesLookup, LookUpTechnologies } from "./Technologies.types";
 
-export const technologiesLookup: TechnologiesLookup = {
+const technologiesLookup: TechnologiesLookup = {
   apollo: {
     src: "/icons/frameworks/apollo.svg",
     title: "Apollo GraphQL",
@@ -8,7 +8,7 @@ export const technologiesLookup: TechnologiesLookup = {
   },
   urql: {
     src: "/icons/frameworks/urql.svg",
-    title: "Universal React Query Library (URQL)",
+    title: "URQL",
     alt: "URQL logo",
   },
   codegen: {
@@ -53,8 +53,8 @@ export const technologiesLookup: TechnologiesLookup = {
   },
   sccm: {
     src: "/icons/infrastructure/sccm.svg",
-    title: "System Center Configuration Manager (SCCM)",
-    alt: "System Center Configuration Manager logo",
+    title: "SCCM",
+    alt: "SCCM logo",
   },
   cSharp: {
     src: "/icons/languages/csharp.svg",
@@ -63,13 +63,13 @@ export const technologiesLookup: TechnologiesLookup = {
   },
   css: {
     src: "/icons/languages/css.svg",
-    title: "Cascading Style Sheets (CSS)",
-    alt: "Cascading Style Sheets logo",
+    title: "CSS",
+    alt: "CSS logo",
   },
   html: {
     src: "/icons/languages/html.svg",
-    title: "Hyper Text Markup Language (HTML)",
-    alt: "Hyper Text Markup Language logo",
+    title: "HTML",
+    alt: "HTML logo",
   },
   javascript: {
     src: "/icons/languages/javascript.svg",
@@ -88,7 +88,7 @@ export const technologiesLookup: TechnologiesLookup = {
   },
   aws: {
     src: "/icons/platforms/aws.svg",
-    title: "Amazon Web Services (AWS)",
+    title: "AWS",
     alt: "Amazon Web Services logo",
   },
   azure: {
@@ -113,7 +113,7 @@ export const technologiesLookup: TechnologiesLookup = {
   },
   npm: {
     src: "/icons/tools/npm.svg",
-    title: "Node Package Manager (NPM)",
+    title: "NPM",
     alt: "Node Package Manager logo",
   },
   prettier: {
@@ -127,3 +127,19 @@ export const technologiesLookup: TechnologiesLookup = {
     alt: "Yarn logo",
   },
 };
+
+export const lookUpTechnologies = ({ technologies }: LookUpTechnologies) =>
+  technologies.map((tech) => {
+    if (typeof tech === "string") {
+      return {
+        src: technologiesLookup[tech].src,
+        title: technologiesLookup[tech].title,
+        alt: technologiesLookup[tech].alt,
+      };
+    }
+    return {
+      src: technologiesLookup[tech.lookUp].src,
+      title: tech.title,
+      alt: tech.alt,
+    };
+  });

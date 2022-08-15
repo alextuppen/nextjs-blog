@@ -1,0 +1,54 @@
+@import "src/styles/globals";
+
+.root {
+  @include elev-5();
+  grid-area: technologies;
+  --icon-size: 1.5rem;
+  width: 100%;
+  border-top: var(--border-width) solid $primary;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  padding: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: var(--padding) var(--padding-half);
+  margin: 0;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: var(--padding-half) var(--padding);
+  list-style-type: none;
+}
+
+.iconWrapper {
+  margin-right: var(--padding-half);
+  position: relative;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  flex-shrink: 0;
+}
+
+@include bp-small {
+  .root {
+    --icon-size: 1.75rem;
+  }
+
+  .wrapper {
+    padding: var(--padding);
+  }
+}
+
+@include bp-medium {
+  .root {
+    --icon-size: 2rem;
+  }
+}

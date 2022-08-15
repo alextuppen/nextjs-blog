@@ -1,9 +1,69 @@
 @import "src/styles/globals";
 
-.card {
+.card,
+.techCard {
   @include elev-1();
 }
 
-.education {
+.techCard {
+  grid-template-columns: unset;
+  grid-template-areas:
+    "title"
+    "details"
+    "description"
+    "technologies";
+  padding: 0;
+  gap: unset;
+}
+
+.title {
+  grid-area: title;
+  padding: var(--padding-double);
+}
+
+.description,
+.emptyDescription {
+  grid-area: description;
+}
+
+.description {
+  padding: var(--padding-double) var(--padding-half);
+}
+
+.emptyDescription {
+  padding: var(--padding-triple);
+}
+
+.educationWrapper {
   gap: var(--padding-triple);
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding-half);
+}
+
+@include bp-small {
+  .description {
+    padding: var(--padding-double) var(--padding);
+  }
+}
+
+@include bp-medium {
+  .techCard {
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "details title"
+      "details description"
+      "technologies technologies";
+  }
+
+  .description {
+    padding: 0 var(--padding-double) var(--padding-double);
+  }
+
+  .emptyDescription {
+    padding: 0 var(--padding-triple) var(--padding-triple);
+  }
 }

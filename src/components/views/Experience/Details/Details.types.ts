@@ -1,11 +1,13 @@
 interface Details {
   organisation: string;
   location: string;
-  dateRange: string;
+  startDate: string;
+  endDate: string;
   roleType: string;
 }
 
 export interface DetailsProps {
-  title: string;
-  details?: Details;
+  details: Details;
+  variant: "primary" | "secondary";
+  radiusBottomLeft?: boolean;
 }

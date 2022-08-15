@@ -5,6 +5,8 @@ export const experiences = [
       organisation: "HeadBox",
       location: "London",
       dateRange: "June 2022 - Present",
+      startDate: "June 2022",
+      endDate: "Present",
       roleType: "Permanent",
     },
     technologies: [
@@ -33,7 +35,8 @@ export const experiences = [
     details: {
       organisation: "HeadBox",
       location: "London",
-      dateRange: "October 2021 - June 2022",
+      startDate: "October 2021",
+      endDate: "June 2022",
       roleType: "Permanent",
     },
     technologies: [
@@ -62,7 +65,8 @@ export const experiences = [
     details: {
       organisation: "WorldRemit",
       location: "London",
-      dateRange: "March 2020 - October 2021",
+      startDate: "March 2020",
+      endDate: "October 2021",
       roleType: "Permanent",
     },
     technologies: [
@@ -101,7 +105,8 @@ export const experiences = [
     details: {
       organisation: "Armicus",
       location: "London",
-      dateRange: "August 2018 - March 2020",
+      startDate: "August 2018",
+      endDate: "March 2020",
       roleType: "Permanent",
     },
     technologies: [
@@ -136,7 +141,8 @@ export const experiences = [
     details: {
       organisation: "PowerON Platforms",
       location: "London",
-      dateRange: "September 2016 - August 2018",
+      startDate: "September 2016",
+      endDate: "August 2018",
       roleType: "Permanent",
     },
     technologies: [
@@ -167,7 +173,8 @@ export const experiences = [
     details: {
       organisation: "Cireson",
       location: "London",
-      dateRange: "August 2015 - September 2016",
+      startDate: "August 2015",
+      endDate: "September 2016",
       roleType: "Permanent",
     },
     description: [
@@ -184,7 +191,8 @@ export const experiences = [
     details: {
       organisation: "Rocksteady Studios Ltd",
       location: "London",
-      dateRange: "May 2013 - August 2015",
+      startDate: "May 2013",
+      endDate: "August 2015",
       roleType: "Permanent",
     },
     description: [
@@ -222,7 +230,8 @@ export const education = [
     details: {
       organisation: "The University of Derby",
       location: "Derby",
-      dateRange: "2009 - 2013",
+      startDate: "2009",
+      endDate: "2013",
       roleType: "Full time student",
     },
   },
@@ -231,7 +240,8 @@ export const education = [
     details: {
       organisation: "Colchester Sixth College",
       location: "Colchester",
-      dateRange: "2006 - 2008",
+      startDate: "2006",
+      endDate: "2008",
       roleType: "Full time student",
     },
   },

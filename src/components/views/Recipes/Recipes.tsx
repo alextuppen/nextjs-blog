@@ -117,7 +117,7 @@ export const Recipes: FC<RecipesProps> = ({ recipes, allKeywords }) => {
                 >
                   <Card className={styles.recipeCard} key={id}>
                     <h2 className={styles.recipeName}>{name}</h2>
-                    {image[0] !== "" && (
+                    {image && image[0] !== "" && (
                       <div className={styles.recipeImageWrapper}>
                         <Image
                           alt={name}
