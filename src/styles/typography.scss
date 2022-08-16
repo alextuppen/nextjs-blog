@@ -46,7 +46,7 @@ span,
 blockquote,
 th,
 td {
-  font-size: 1rem;
+  font-size: var(--font-size);
 }
 
 @include bp-small {
@@ -64,14 +64,6 @@ td {
 
   h5 {
     font-size: 1.2rem;
-  }
-
-  p,
-  span,
-  blockquote,
-  th,
-  td {
-    font-size: 1.1rem;
   }
 }
 
@@ -91,14 +83,6 @@ td {
   h5 {
     font-size: 1.4rem;
   }
-
-  p,
-  span,
-  blockquote,
-  th,
-  td {
-    font-size: 1.2rem;
-  }
 }
 
 @include bp-large {
@@ -116,13 +100,5 @@ td {
 
   h5 {
     font-size: 1.6rem;
-  }
-
-  p,
-  span,
-  blockquote,
-  th,
-  td {
-    font-size: 1.3rem;
   }
 }

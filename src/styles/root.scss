@@ -14,6 +14,7 @@ html {
   --padding: 1rem;
   --padding-double: calc(var(--padding) * 2);
   --padding-triple: calc(var(--padding) * 3);
+  --font-size: 1rem;
 }
 
 body {
@@ -30,6 +31,7 @@ main {
     --border-radius: 0.75rem;
     --content-max-width: 95%;
     --padding: 1.125rem;
+    --font-size: 1.1rem;
   }
 }
 
@@ -38,12 +40,14 @@ main {
     --border-width: 0.15rem;
     --border-radius: 1rem;
     --padding: 1.25rem;
+    --font-size: 1.2rem;
   }
 }
 
 @include bp-large {
   html {
     --content-max-width: 70rem;
+    --font-size: 1.3rem;
   }
 }
 
