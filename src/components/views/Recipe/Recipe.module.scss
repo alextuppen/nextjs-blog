@@ -41,9 +41,47 @@
   width: 75%;
 }
 
-.descriptionItemsList,
+.draft {
+  padding: var(--padding);
+  @include elev-6();
+  display: grid;
+  grid-template-areas:
+    "icon title"
+    "icon text";
+  row-gap: var(--padding-half);
+  column-gap: var(--padding);
+  border: var(--border-width) solid $secondary;
+  border-radius: var(--border-radius);
+}
+
+.draftIcon {
+  grid-area: icon;
+  width: calc(var(--font-size) * 3);
+  height: 100%;
+  color: $text;
+}
+
+.draftTitle {
+  grid-area: title;
+  justify-self: start;
+}
+
+.draftText {
+  grid-area: text;
+  justify-self: start;
+  text-align: start;
+}
+
+.descriptionItemsList {
+  margin: unset;
+}
+
 .toolsIngredientsList {
   margin-top: var(--padding);
+}
+
+.descriptionItemsList,
+.toolsIngredientsList {
   padding-left: 0;
   display: grid;
   grid-template-columns: 1fr;
@@ -61,14 +99,17 @@
 }
 
 .descriptionItem > svg {
-  font-size: 1.5rem;
+  font-size: var(--font-size);
+}
+
+.descriptionItem > span {
+  white-space: nowrap;
 }
 
 .toolsIngredientsIcon {
   position: relative;
-  --bullet-point-height: 0.8rem;
-  width: calc(var(--bullet-point-height) * 1.5);
-  height: var(--bullet-point-height);
+  width: var(--font-size);
+  height: calc(var(--font-size) * 0.75);
 }
 
 .methods {
@@ -119,14 +160,14 @@
     height: 30rem;
   }
 
-  .descriptionItems,
-  .toolsIngredients {
-    width: 90%;
-  }
-
   .descriptionItemsList,
   .toolsIngredientsList {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .descriptionItems,
+  .toolsIngredients {
+    width: 90%;
   }
 }
 
@@ -135,19 +176,35 @@
     height: 40rem;
   }
 
+  .description {
+    width: 90%;
+  }
+
+  .descriptionItemsListWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--padding);
+  }
+
+  .descriptionItemsList {
+    margin-top: unset;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--padding);
+  }
+
+  .toolsIngredientsList {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
   .descriptionItems,
   .toolsIngredients {
     width: 100%;
   }
 
-  .descriptionItemsList {
-    display: flex;
-    justify-content: center;
-    gap: var(--padding-double);
-  }
-
-  .toolsIngredientsList {
-    grid-template-columns: 1fr 1fr 1fr;
+  .descriptionItem {
+    padding: 0 var(--padding);
   }
 }
 

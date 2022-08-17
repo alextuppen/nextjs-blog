@@ -4,6 +4,7 @@ import { DateTime } from "luxon";
 import { BsFillCalendarFill } from "react-icons/bs";
 import { FaLightbulb } from "react-icons/fa";
 import { GiKnifeFork } from "react-icons/gi";
+import { HiExclamationCircle } from "react-icons/hi";
 import { useMediumMediaQuery } from "hooks";
 import { Card, Section } from "@layout";
 import { Time, TimeType } from "./Time";
@@ -64,6 +65,7 @@ export const Recipe: FC<RecipeProps> = ({
     recipeIngredient,
     tool,
     recipeInstructions,
+    creativeWorkStatus,
   },
 }) => {
   const isMediumBP = useMediumMediaQuery();
@@ -73,7 +75,7 @@ export const Recipe: FC<RecipeProps> = ({
       <h2>{name}</h2>
       <div className={styles.grid}>
         <Card className={styles.descriptionCard}>
-          {image[0] !== "" && (
+          {image && image[0] !== "" && (
             <div className={styles.imageWrapper}>
               <Image
                 src={image[0]}
@@ -84,38 +86,46 @@ export const Recipe: FC<RecipeProps> = ({
               />
             </div>
           )}
-          <div className={styles.descriptionItems}>
-            <p>{description}</p>
-            {!isMediumBP ? (
+          {creativeWorkStatus && creativeWorkStatus === "draft" && (
+            <div className={styles.draft}>
+              <HiExclamationCircle className={styles.draftIcon} />
+              <h3 className={styles.draftTitle}>Draft recipe</h3>
+              <span className={styles.draftText}>
+                This recipe is still in draft state, it is unfinished and still
+                being refined.
+              </span>
+            </div>
+          )}
+          <p className={styles.description}>{description}</p>
+          {!isMediumBP ? (
+            <ul className={styles.descriptionItemsList}>
+              <Times
+                prepTime={prepTime}
+                cookTime={cookTime}
+                totalTime={totalTime}
+              />
+              <YieldPublished
+                recipeYield={recipeYield}
+                datePublished={datePublished}
+              />
+            </ul>
+          ) : (
+            <div className={styles.descriptionItemsListWrapper}>
               <ul className={styles.descriptionItemsList}>
                 <Times
                   prepTime={prepTime}
                   cookTime={cookTime}
                   totalTime={totalTime}
                 />
+              </ul>
+              <ul className={styles.descriptionItemsList}>
                 <YieldPublished
                   recipeYield={recipeYield}
                   datePublished={datePublished}
                 />
               </ul>
-            ) : (
-              <>
-                <ul className={styles.descriptionItemsList}>
-                  <Times
-                    prepTime={prepTime}
-                    cookTime={cookTime}
-                    totalTime={totalTime}
-                  />
-                </ul>
-                <ul className={styles.descriptionItemsList}>
-                  <YieldPublished
-                    recipeYield={recipeYield}
-                    datePublished={datePublished}
-                  />
-                </ul>
-              </>
-            )}
-          </div>
+            </div>
+          )}
         </Card>
         <Card className={styles.toolsIngredientsCard}>
           <div className={styles.toolsIngredients}>

@@ -17,7 +17,7 @@
   "recipeYield": 2,
   "recipeCategory": "Weeknight meal",
   "recipeIngredient": [
-    "4tbsp vegetable oil",
+    "2tbsp vegetable oil",
     "500g pre-chopped butternut squash",
     "4 boneless skinned chicken thighs",
     "200g tenderstem broccoli",
@@ -50,42 +50,59 @@
   "recipeInstructions": [
     {
       "@type": "HowToStep",
-      "name": "Pre-heat oven to 220C and toss ",
-      "text": "Pre-heat the oven to 220C ."
+      "name": "Pre-heat the oven to 220C"
     },
     {
       "@type": "HowToStep",
-      "name": "Saute onion and chorizo",
-      "text": "Set the saucepan on a medium heat and add the oil; once the oil is hot add the onion and chorizo."
+      "name": "Add butternut squash and chicken thighs to roasting tin",
+      "text": "Add the butternut squash pieces into the roasting tin, toss with salt, oil and pepper, place the chicken thighs on top and put the tin in the oven once it is up to temperature."
     },
     {
       "@type": "HowToStep",
-      "name": "Add cream, chicken stock, orzo and water",
+      "name": "Set a timer for 10 minutes"
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Chop broccoli, dice onion and mince garlic",
       "itemListElement": [
         {
           "@type": "HowToDirection",
-          "text": "Once the onion is soft, the chorizo is cooked and enough of the chorizo oil has rendered out to colour the mixture dark red add the cream, chicken stock, orzo and water and stir to combine."
+          "text": "While you wait for the timer chop the brocolli into pieces roughly 2cm long, finely dice the onion and mince the garlic."
         },
         {
           "@type": "HowToTip",
-          "text": "The pasta is being cooked in as little water as possible so make sure to stir frequently to prevent it sticking to the bottom of the pan."
+          "text": "Chop these things in this order as this is the order they will be needed in later for cooking."
         }
       ]
     },
     {
       "@type": "HowToStep",
-      "name": "Add black pepper and balsamic vinegar",
-      "text": "While the pasta comes up to the boil set a timer for 2 minutes, grind in the black pepper and add the balsamic vinegar then stir to combine."
+      "name": "Add broccoli to roasting tin",
+      "text": "When the timer goes off add the brocolli to the roasting tin and stir to flip the butternut squash and coat the brocolli in the oil, salt and pepper."
     },
     {
       "@type": "HowToStep",
-      "name": "Add peas",
-      "text": "When the timer goes off add the peas, once back to the boil set a timer for 2 minutes."
+      "name": "Set a timer for 20 minutes"
     },
     {
       "@type": "HowToStep",
-      "name": "Add parsley, season, grate parmessan and serve",
-      "text": "When the second timer goes off stir through the chopped parsley, season to taste, plate, grate over parmessan and serve."
+      "name": "Saute onion",
+      "text": "Add the vegetable oil to the frying pan and once hot saute the onion."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Saute garlic",
+      "text": "When the onion is a few minutes away from being cooked add the minced garlic."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "deglaze pan and finish sauce",
+      "text": "Once the garlic is cooked add 2 tablespoons of water to the pan to deglaze the fond, then add the cream cheese and stir until a runny sauce consistency is achieved. Then turn off the heat, add the chicken stock pot, 2 teaspoons of balsamic vinegar and salt and pepper to taste, stir to combine and set aside."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Plate and serve",
+      "text": "When the timer goes off take the roasting tin out of the oven, plate the butternut squash and broccoli, place the chicken thighs on top and spoon over the sauce, serve."
     }
   ]
 }
