@@ -1,6 +1,8 @@
 import { FC, useEffect, useState } from "react";
 import { uniq } from "lodash";
 import { GrPowerReset } from "react-icons/gr";
+import { HiExclamationCircle } from "react-icons/hi";
+import { BsCardImage } from "react-icons/bs";
 import { ButtonVariants, Button } from "@input";
 import { Card, Section } from "@layout";
 import { motion, AnimatePresence } from "framer-motion";
@@ -100,7 +102,14 @@ export const Recipes: FC<RecipesProps> = ({ recipes, allKeywords }) => {
       <div className={styles.recipeGrid}>
         <AnimatePresence>
           {visibleRecipes.map((recipe) => {
-            const { id, image, name, description, keywords } = recipe;
+            const {
+              id,
+              image,
+              name,
+              description,
+              keywords,
+              creativeWorkStatus,
+            } = recipe;
 
             return (
               <motion.div
@@ -117,7 +126,7 @@ export const Recipes: FC<RecipesProps> = ({ recipes, allKeywords }) => {
                 >
                   <Card className={styles.recipeCard} key={id}>
                     <h2 className={styles.recipeName}>{name}</h2>
-                    {image && image[0] !== "" && (
+                    {image ? (
                       <div className={styles.recipeImageWrapper}>
                         <Image
                           alt={name}
@@ -126,6 +135,21 @@ export const Recipes: FC<RecipesProps> = ({ recipes, allKeywords }) => {
                           objectFit="cover"
                           quality={100}
                         />
+                      </div>
+                    ) : (
+                      <div>
+                        <BsCardImage
+                          className={styles.recipePlaceHolderImage}
+                        />
+                        <span>Image coming soon!</span>
+                      </div>
+                    )}
+                    {creativeWorkStatus && creativeWorkStatus === "draft" && (
+                      <div className={styles.draftRecipeWrapper}>
+                        <div className={styles.draftRecipe}>
+                          <HiExclamationCircle />
+                          <span>Draft recipe</span>
+                        </div>
                       </div>
                     )}
                     <span>{description}</span>

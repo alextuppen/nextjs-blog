@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org/",
   "@type": "Recipe",
-  "name": "Roasted chicken, butternut squash and broccoli with a cheese sauce",
+  "name": "Roasted chicken and vegetables with cheese sauce",
   "image": ["/recipes/roasted-chicken-veg-cheese-sauce.jpg"],
   "author": {
     "@type": "Person",

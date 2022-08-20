@@ -20,8 +20,14 @@ export const getSortedRecipesSynopsis = (): RecipeSynopsis[] => {
 
   const allRecipesData = fileNames.map((fileName) => {
     const fullPath = path.join(recipesDirectory, fileName);
-    const { name, image, datePublished, description, keywords } =
-      getFileContentsWithSplitKeywords(fullPath);
+    const {
+      name,
+      image,
+      datePublished,
+      description,
+      keywords,
+      creativeWorkStatus,
+    } = getFileContentsWithSplitKeywords(fullPath);
 
     return {
       id: fileName.replace(/\.json$/, ""),
@@ -30,6 +36,7 @@ export const getSortedRecipesSynopsis = (): RecipeSynopsis[] => {
       datePublished,
       description,
       keywords,
+      creativeWorkStatus,
     };
   });
 

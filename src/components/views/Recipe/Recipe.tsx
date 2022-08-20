@@ -91,8 +91,8 @@ export const Recipe: FC<RecipeProps> = ({
               <HiExclamationCircle className={styles.draftIcon} />
               <h3 className={styles.draftTitle}>Draft recipe</h3>
               <span className={styles.draftText}>
-                This recipe is still in draft state, it is unfinished and still
-                being refined.
+                This recipe is in draft state, it is unfinished and still being
+                refined.
               </span>
             </div>
           )}

@@ -1,7 +1,7 @@
 {
   "@context": "https://schema.org/",
   "@type": "Recipe",
-  "name": "Pan fried chicken thigh, rice salad and a satay sauce",
+  "name": "Chicken and rice salad with satay sauce",
   "image": ["/recipes/roasted-chicken-satay-salad.jpg"],
   "author": {
     "@type": "Person",

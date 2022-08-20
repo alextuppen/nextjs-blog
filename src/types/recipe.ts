@@ -28,6 +28,7 @@ export interface RecipeSynopsis {
   datePublished: string;
   description: string;
   keywords: string[];
+  creativeWorkStatus: "draft" | "published";
 }
 
 export interface IRecipe extends RecipeSynopsis {
