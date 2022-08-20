@@ -1,0 +1,87 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Sun dried tomato, feta and pesto couscous salad",
+  "author": {
+    "@type": "Person",
+    "name": "Alex Tuppen"
+  },
+  "datePublished": "2022-08-20",
+  "description": "This meal is particularly quick and easy, it might be simple but the ingredients last a long time in the cupboard/freezer and it tastes really good.",
+  "creativeWorkStatus": "draft",
+  "prepTime": "PT10M",
+  "cookTime": "PT10M",
+  "totalTime": "PT20M",
+  "keywords": "weeknight, tomato, feta, frozen vegetables, pesto, cheese, couscous, salad, long life",
+  "recipeYield": 2,
+  "recipeCategory": "Weeknight meal",
+  "recipeIngredient": [
+    "200ml couscous",
+    "165g dried tomatoes (I like Belazu balsamic semi dried tomatoes for this recipe)",
+    "2tbsp of the oil the dried tomatoes came in",
+    "200g feta",
+    "320g mixed frozen vegetables",
+    "190g pesto",
+    "1 chicken stock pot",
+    "freshly ground black pepper",
+    "salt to season"
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Chefs knife"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Chopping board"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Large mixing bowl"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Heat resistant measuring jug"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Microwave steamer"
+    }
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Make couscous",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Measure out the couscous into the heat proof measuring jug, remove to another bowl. Add the chicken stock pot, salt and freshly ground black pepper to the (empty) measuring jug and top up with boilling water to be 200ml, stir to combine. Return the couscous to the measuring jug, mix to ensure the couscous is all submerged, set a time for 10 minutes and set aside."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "This is my go to way of making couscous easily, a 1:1 ratio of couscous to liquid, by putting the flavourings in the liquid the couscous absorbs them as it cooks. Oil is another good thing to use, but is not used in this recipe because of the oil in the pesto."
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Cook vegetables",
+      "text": "Follow the packet instructions to steam your frozen vegetables."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Chop tomatoes and feta",
+      "text": "While everything cooks chop the tomatoes and into roughly 1cm pieces; add both, 2 tbsp of the oil the tomatoes came in and the pesto to a large mixing bowl."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Add vegetables and couscous",
+      "text": "When the vegetables have finished steaming add them into the mixing bowl. When the timer for the couscous goes off stir and break up with a fork, then microwave on high for 2 minutes and add to the mixing bowl. Mix everything together."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Season and serve",
+      "text": "Taste and season as required (or add more pesto), plate and serve."
+    }
+  ]
+}

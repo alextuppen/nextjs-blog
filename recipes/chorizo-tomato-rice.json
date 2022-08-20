@@ -8,7 +8,7 @@
     "name": "Alex Tuppen"
   },
   "datePublished": "2021-02-27",
-  "description": "This meal is cooked entirely in a rice cooker making it extremely easy to cook, a couple of hacks like chorizo and a good chipotle paste ensure it is full of flavour.",
+  "description": "This meal is cooked entirely in a rice cooker making it extremely easy to cook; a couple of hacks like chorizo and a good chipotle paste ensure it is full of flavour.",
   "creativeWorkStatus": "published",
   "prepTime": "PT15M",
   "cookTime": "PT20M",
@@ -60,7 +60,8 @@
   "recipeInstructions": [
     {
       "@type": "HowToStep",
-      "name": "Chop chorizo into 1cm cubes and finely dice the onion."
+      "name": "Chop chorizo; dice onion",
+      "text": "Chop chorizo into 1cm cubes and finely dice the onion."
     },
     {
       "@type": "HowToStep",
@@ -80,11 +81,6 @@
       "@type": "HowToStep",
       "name": "Chop and saute garlic",
       "text": "Finely mince the garlic, when the onion is a few minutes from being softened add the garlic, tomato puree and chipotle paste."
-    },
-    {
-      "@type": "HowToStep",
-      "name": "Chop tomatoes, coriander and zest the lime",
-      "text": "While the garlic cooks chop the tomatoes into quarters lengthways, finely slice the coriander stems, and zest the line."
     },
     {
       "@type": "HowToStep",
@@ -131,7 +127,8 @@
     },
     {
       "@type": "HowToStep",
-      "name": "Plate, grate cheddar cheese over to taste,  and serve."
+      "name": "Plate and serve",
+      "text": "Plate, top with soured cream and grated cheddar cheese and serve."
     }
   ]
 }

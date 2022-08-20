@@ -110,6 +110,7 @@
   position: relative;
   width: var(--font-size);
   height: calc(var(--font-size) * 0.75);
+  flex-shrink: 0;
 }
 
 .methods {
@@ -215,6 +216,7 @@
 
   .grid {
     grid-template-areas: "description description" "ingredients method";
+    grid-template-columns: 30% 1fr;
   }
 
   .toolsIngredientsList {

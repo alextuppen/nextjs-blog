@@ -1,0 +1,138 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Recipe",
+  "name": "Chicken and rice salad with satay sauce",
+  "image": ["/recipes/chicken-rice-satay-salad.jpg"],
+  "author": {
+    "@type": "Person",
+    "name": "Alex Tuppen"
+  },
+  "datePublished": "2022-07-25",
+  "description": "While the chicken thighs cook you make the salad then everything comes together at the end when the pan is deglazed and the satay sauce tops it off.",
+  "creativeWorkStatus": "draft",
+  "prepTime": "PT20M",
+  "cookTime": "PT25M",
+  "totalTime": "PT25M",
+  "keywords": "weeknight, chicken, carrot, sugarsnap peas, peanut, rice, salad",
+  "recipeYield": 2,
+  "recipeCategory": "Weeknight meal",
+  "recipeIngredient": [
+    "4tbsp vegetable oil",
+    "4tbsp water",
+    "4 boneless skinned chicken thighs",
+    "200g sugarsnap peas",
+    "1 large carrot",
+    "250g microwave brown rice pouch",
+    "3 cloves garlic",
+    "Thumb sized piece of ginger",
+    "160g coconut cream",
+    "4tbsp crunchy peanut butter",
+    "30g fresh coriander",
+    "2tsp soy sauce",
+    "2tsp fish sauce",
+    "salt to season"
+  ],
+  "tool": [
+    {
+      "@type": "HowToTool",
+      "name": "Chefs knife"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Chopping board"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Medium frying pan"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Wooden spoon"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Microplane grater"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Medium grater"
+    },
+    {
+      "@type": "HowToTool",
+      "name": "Large mixing bowl"
+    }
+  ],
+  "recipeInstructions": [
+    {
+      "@type": "HowToStep",
+      "name": "Pan fry chicken",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Add 2 tablespoons of vegetable oil to the frying pan and place on a medium high heat, once the oil is hot add the chicken thighs."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "The chicken will take around 13 minutes to cook through, I like to set a timer to keep track."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "If you are cooking in a stainless steel frying pan (which you should be for maximum fond) make sure to let the chicken release from the pan by itself rather than tearing it off."
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Grate ginger and garlic",
+      "text": "Grate the ginger and garlic with the microplane grater and set aside."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Grate carrot, chop peas and coriander and heat rice",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "While the chicken cooks grate the carrot on the large side of a grater, roughly chop the sugar snap peas, finely chop the coriander and add to the large mixing bowl."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "Remember to keep an eye on the chicken, once the first side is browned flip it."
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Set chicken aside and deglaze",
+      "itemListElement": [
+        {
+          "@type": "HowToDirection",
+          "text": "Once the chicken is cooked (internal temperature of at least 74°C, ideally 79°C) take it out of the pan and set to one side; add 4 tablespoons of water into the pan, return to the heat and scrape the fond."
+        },
+        {
+          "@type": "HowToTip",
+          "text": "You only need to deglaze the pan if the fond is starting to burn, if this isn't a problem you can skip straight to the next step."
+        }
+      ]
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Saute ginger and garlic",
+      "text": "Add the remaining 2 tablespoons of oil and once hot add the ginger and garlic and saute for 2 minutes."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Saute ginger and garlic",
+      "text": "When the ginger and garlic are softened turn the heat to low and add the coconut cream, peanut butter, soy sauce and fish sauce and stir to combine; remove from the heat."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Heat rice",
+      "text": "Heat the rice according to packet instructions, add to the large mixing bowl, season to taste and stir to combine."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Plate and serve",
+      "text": "Plate the salad, place the chicken on top and then coat with sauce and serve."
+    }
+  ]
+}
