@@ -5,7 +5,7 @@ import { HiExclamationCircle } from "react-icons/hi";
 import { BsCardImage } from "react-icons/bs";
 import { ButtonVariants, Button } from "@input";
 import { Card, Section } from "@layout";
-import { motion, AnimatePresence } from "framer-motion";
+import { m, AnimatePresence } from "framer-motion";
 import { RecipeSynopsis } from "@types";
 import Image from "next/image";
 import { RecipesProps } from "./Recipes.types";
@@ -73,7 +73,7 @@ export const Recipes: FC<RecipesProps> = ({ recipes, allKeywords }) => {
         <div className={styles.keywords}>
           <AnimatePresence>
             {visibleKeywords.map((keyword) => (
-              <motion.div
+              <m.div
                 key={keyword}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -90,7 +90,7 @@ export const Recipes: FC<RecipesProps> = ({ recipes, allKeywords }) => {
                 >
                   {keyword}
                 </Button>
-              </motion.div>
+              </m.div>
             ))}
           </AnimatePresence>
         </div>
@@ -112,7 +112,7 @@ export const Recipes: FC<RecipesProps> = ({ recipes, allKeywords }) => {
             } = recipe;
 
             return (
-              <motion.div
+              <m.div
                 key={id}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -162,7 +162,7 @@ export const Recipes: FC<RecipesProps> = ({ recipes, allKeywords }) => {
                     </div>
                   </Card>
                 </Button>
-              </motion.div>
+              </m.div>
             );
           })}
         </AnimatePresence>
