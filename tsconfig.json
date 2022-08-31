@@ -1,7 +1,11 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "skipLibCheck": true,
     "allowJs": true,
     "strict": true,
@@ -15,14 +19,29 @@
     "jsx": "preserve",
     "baseUrl": "src",
     "paths": {
-      "@constants": ["./constants"],
-      "@hooks": ["./hooks"],
-      "@lib": ["./lib"],
-      "@input": ["./components/input"],
-      "@layout": ["./components/layout"],
-      "@views": ["./components/views"],
-      "@types": ["./types"]
-    }
+      "@constants": [
+        "./constants"
+      ],
+      "@hooks": [
+        "./hooks"
+      ],
+      "@lib": [
+        "./lib"
+      ],
+      "@input": [
+        "./components/input"
+      ],
+      "@layout": [
+        "./components/layout"
+      ],
+      "@views": [
+        "./components/views"
+      ],
+      "@types": [
+        "./types"
+      ]
+    },
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
@@ -31,5 +50,7 @@
     "src/pages/_document.ts",
     "src/pages/index.js"
   ],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules"
+  ]
 }
