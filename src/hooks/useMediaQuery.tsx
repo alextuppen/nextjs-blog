@@ -25,4 +25,4 @@ const useMediaQuery = (query: string) => {
 export const useSmallMediaQuery = () => useMediaQuery(BP_QUERY_SMALL);
 export const useMediumMediaQuery = () => useMediaQuery(BP_QUERY_MEDIUM);
 export const useLargeMediaQuery = () => useMediaQuery(BP_QUERY_LARGE);
-export const useXlediaQuery = () => useMediaQuery(BP_QUERY_XL);
+export const useXlmediaQuery = () => useMediaQuery(BP_QUERY_XL);

@@ -2,5 +2,5 @@ export {
   useSmallMediaQuery,
   useMediumMediaQuery,
   useLargeMediaQuery,
-  useXlediaQuery,
+  useXlmediaQuery,
 } from "./useMediaQuery";
